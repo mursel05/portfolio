@@ -7,6 +7,7 @@ import { getMessages } from "next-intl/server";
 import LenisProvider from "@/utils/lenis";
 import CustomScrollbar from "@/components/layout/CustomScrollbar";
 import { routing } from "@/i18n/routing";
+import CustomCursor from "@/components/layout/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -54,6 +55,7 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LenisProvider>
+            <CustomCursor />
             <CustomScrollbar />
             {children}
           </LenisProvider>

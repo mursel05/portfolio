@@ -22,6 +22,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1.0,
       lastModified: new Date(),
     },
+    {
+      path: "/work",
+      changeFrequency: "weekly",
+      priority: 0.8,
+      lastModified: new Date(),
+    },
+    {
+      path: "/contact",
+      changeFrequency: "monthly",
+      priority: 0.6,
+      lastModified: new Date(),
+    },
+    {
+      path: "/info",
+      changeFrequency: "yearly",
+      priority: 0.4,
+      lastModified: new Date(),
+    },
   ];
 
   return pages.flatMap((page) =>

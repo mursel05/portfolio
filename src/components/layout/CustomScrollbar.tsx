@@ -132,10 +132,10 @@ export default function CustomScrollbar() {
     <div
       ref={trackRef}
       aria-hidden
-      className="custom-scrollbar fixed top-0 right-0 z-9999 hidden h-screen w-3 max-sm:w-1.5 opacity-0 transition-opacity duration-300 sm:block">
+      className="custom-scrollbar fixed top-0 right-0 z-9999 hidden h-screen w-3 max-sm:w-1.5 opacity-0 mix-blend-difference transition-opacity duration-300 sm:block">
       <div
         ref={thumbRef}
-        className="mx-0.75 max-sm:mx-0.5 w-1.5 max-sm:w-0.5 rounded-full bg-[#0B1012] transition-[width,margin,background-color]"
+        className="mx-0.75 max-sm:mx-0.5 w-1.5 max-sm:w-0.5 rounded-full bg-white transition-[width,margin,background-color]"
       />
     </div>
   );
