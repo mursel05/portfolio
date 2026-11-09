@@ -4,10 +4,11 @@ import "../globals.css";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import LenisProvider from "@/utils/lenis";
+import LenisProvider from "@/lib/lenis";
 import CustomScrollbar from "@/components/layout/CustomScrollbar";
 import { routing } from "@/i18n/routing";
 import CustomCursor from "@/components/layout/CustomCursor";
+import Tracker from "@/components/layout/Tracker";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -55,6 +56,7 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LenisProvider>
+            <Tracker />
             <CustomCursor />
             <CustomScrollbar />
             {children}

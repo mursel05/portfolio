@@ -114,7 +114,7 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 md:items-center md:gap-0 md:grid-cols-[minmax(0,30rem)_minmax(0,1fr)_minmax(0,30rem)]">
+      <div className="grid grid-cols-2 gap-3 md:items-center md:gap-0 md:grid-cols-[minmax(0,32rem)_minmax(0,1fr)_minmax(0,32rem)]">
         <div className="relative order-1 aspect-4/3 w-full md:aspect-auto md:h-72 lg:h-100">
           {projects.map((p, i) => (
             <Image
@@ -145,7 +145,7 @@ const Projects = () => {
             {projects.map((p, i) => (
               <span
                 key={p.name}
-                className="font-medium text-[0.9375rem]/[1rem] tracking-[-0.0313rem] transition-colors duration-300"
+                className="font-medium text-[1.5rem]/[1rem] tracking-[-0.0313rem] transition-colors duration-300"
                 style={{ color: i === active ? "#212325" : "#ADADAD" }}>
                 {p.name}
               </span>
