@@ -1,5 +1,11 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import {
+  flushPostHogLogs,
+  logContactMessageDelivered,
+  logContactMessageDeliveryFailed,
+  logContactSubmissionAccepted,
+} from "@/lib/posthog-logs";
 
 const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
@@ -29,10 +35,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid fields" }, { status: 400 });
   }
 
+  logContactSubmissionAccepted();
+
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL;
 
   if (!apiKey || !to) {
+    await flushPostHogLogs();
     return NextResponse.json({ error: "Not configured" }, { status: 500 });
   }
 
@@ -46,8 +55,12 @@ export async function POST(req: Request) {
   });
 
   if (error) {
+    logContactMessageDeliveryFailed();
+    await flushPostHogLogs();
     return NextResponse.json({ error: "Send failed" }, { status: 502 });
   }
 
+  logContactMessageDelivered();
+  await flushPostHogLogs();
   return NextResponse.json({ ok: true });
 }

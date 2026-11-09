@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
+import posthog from "posthog-js";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -28,6 +29,7 @@ const Form = () => {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error();
+      posthog.capture("contact_form_submitted");
       form.reset();
       setStatus("sent");
     } catch {
