@@ -1,13 +1,6 @@
 import { Link } from "@/i18n/navigation";
+import { socials } from "@/lib/info";
 import Image from "next/image";
-
-const socials = [
-  {
-    label: "linkedin",
-    href: "https://www.linkedin.com/in/mursal-hakhverdiyev/",
-  },
-  { label: "github", href: "https://github.com/mursel05" },
-];
 
 const nav = [
   { label: "work", href: "/work" },

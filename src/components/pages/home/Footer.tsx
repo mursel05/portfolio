@@ -1,23 +1,13 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
+import { EMAIL, PHONE, socials } from "@/lib/info";
 import { ArrowUp } from "lucide-react";
-
-const EMAIL = "mursal.haxverdiyev@gmail.com";
-const PHONE = "+994 50 410 97 19";
 
 const nav = [
   { label: "work", href: "/work" },
   { label: "info", href: "/info" },
   { label: "contact", href: "/contact" },
-];
-
-const socials = [
-  {
-    label: "linkedin",
-    href: "https://www.linkedin.com/in/mursal-hakhverdiyev/",
-  },
-  { label: "github", href: "https://github.com/mursel05" },
 ];
 
 const label =

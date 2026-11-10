@@ -101,6 +101,29 @@ const Projects = () => {
 
   const current = projects[active];
 
+  const shot = (key: "image1" | "image2", label: string) => (
+    <>
+      {projects.map((p, i) => (
+        <Image
+          key={p[key]}
+          src={p[key]}
+          alt={`${p.name} ${label}`}
+          width={2000}
+          height={1000}
+          sizes="(min-width: 768px) 45vw, 100vw"
+          priority={i < 2}
+          loading="eager"
+          className={imgClass}
+          style={{
+            opacity: i === active ? 1 : 0,
+            zIndex: i === active ? 2 : 1,
+            transitionDelay: i === active ? "0ms" : "500ms",
+          }}
+        />
+      ))}
+    </>
+  );
+
   return (
     <div
       ref={sectionRef}
@@ -114,38 +137,21 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 md:items-center md:gap-0 md:grid-cols-[minmax(0,32rem)_minmax(0,1fr)_minmax(0,32rem)]">
-        <div className="relative order-1 aspect-4/3 w-full md:aspect-auto md:h-72 lg:h-100">
-          {projects.map((p, i) => (
-            <Image
-              key={p.image1}
-              src={p.image1}
-              alt={`${p.name} screenshot 1`}
-              width={480}
-              height={400}
-              sizes="(min-width: 768px) 480px, 50vw"
-              priority={i < 2}
-              loading="eager"
-              className={imgClass}
-              style={{
-                opacity: i === active ? 1 : 0,
-                zIndex: i === active ? 2 : 1,
-                transitionDelay: i === active ? "0ms" : "500ms",
-              }}
-            />
-          ))}
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1fr)_minmax(7rem,11rem)_minmax(0,1fr)] md:items-center md:gap-6">
+        <div className="relative order-1 aspect-2/1 w-full">
+          {shot("image1", "1")}
         </div>
 
-        <div className="relative order-3 col-span-2 h-(--list-h) overflow-hidden [--list-h:160px] [--gap:32px] md:order-2 md:col-span-1 md:[--list-h:300px] lg:[--list-h:350px] md:[--gap:50px]">
-          <div className="pointer-events-none bg-linear-to-b from-[#f5f5f7] from-29% to-transparent z-99 absolute top-0 w-full h-12 md:h-20" />
-          <div className="pointer-events-none bg-linear-to-t from-[#f5f5f7] from-29% to-transparent z-99 absolute bottom-0 w-full h-12 md:h-20" />
+        <div className="relative order-3 h-(--list-h) overflow-hidden [--list-h:112px] [--gap:28px] md:order-2 md:[--list-h:240px] md:[--gap:44px] lg:[--list-h:320px] lg:[--gap:50px]">
+          <div className="pointer-events-none bg-linear-to-b from-[#f5f5f7] from-29% to-transparent z-99 absolute top-0 w-full h-10 md:h-20" />
+          <div className="pointer-events-none bg-linear-to-t from-[#f5f5f7] from-29% to-transparent z-99 absolute bottom-0 w-full h-10 md:h-20" />
           <div
             ref={trackRef}
             className="flex flex-col items-center gap-(--gap) pt-[calc(var(--list-h)/2-0.5rem)] pb-[calc(var(--list-h)/2-0.5rem)] will-change-transform">
             {projects.map((p, i) => (
               <span
                 key={p.name}
-                className="font-medium text-[1.5rem]/[1rem] tracking-[-0.0313rem] transition-colors duration-300"
+                className="font-medium text-[0.9375rem]/[1rem] tracking-[-0.0313rem] transition-colors duration-300"
                 style={{ color: i === active ? "#212325" : "#ADADAD" }}>
                 {p.name}
               </span>
@@ -153,25 +159,8 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="relative order-2 aspect-4/3 w-full md:order-3 md:aspect-auto md:h-72 lg:h-100">
-          {projects.map((p, i) => (
-            <Image
-              key={p.image2}
-              src={p.image2}
-              alt={`${p.name} screenshot 2`}
-              width={480}
-              height={400}
-              sizes="(min-width: 768px) 480px, 50vw"
-              priority={i < 2}
-              loading="eager"
-              className={imgClass}
-              style={{
-                opacity: i === active ? 1 : 0,
-                zIndex: i === active ? 2 : 1,
-                transitionDelay: i === active ? "0ms" : "500ms",
-              }}
-            />
-          ))}
+        <div className="relative order-2 aspect-2/1 w-full md:order-3">
+          {shot("image2", "2")}
         </div>
       </div>
     </div>

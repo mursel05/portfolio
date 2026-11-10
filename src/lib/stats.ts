@@ -1,9 +1,8 @@
-import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
+import { Prisma } from "../../generated/prisma/client";
 
 export type Range = "7" | "30" | "90" | "all";
 
-// timezone used for the daily chart and the timestamps. Change to yours.
 export const TZ = "Asia/Baku";
 
 const DAY = 86_400_000;
@@ -89,7 +88,6 @@ export async function getStats(range: Range) {
     }),
   ]);
 
-  // fill days with no traffic so the chart has no gaps
   const fmt = new Intl.DateTimeFormat("en-CA", { timeZone: TZ });
   const byDay = new Map(dailyRaw.map((d) => [d.day, d]));
   const daily = Array.from({ length: chartDays }, (_, i) => {

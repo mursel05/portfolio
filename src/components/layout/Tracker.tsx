@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-const SESSION_TIMEOUT = 30 * 60 * 1000; // new session after 30 min of inactivity
+const SESSION_TIMEOUT = 30 * 60 * 1000;
 const SKIP = /^\/(en|az)?\/?stats(\/|$)/;
 
 const rid = () =>
@@ -29,7 +29,7 @@ function getIds() {
     sessionStorage.setItem("sid_t", String(now));
     return { vid, sid, isNew };
   } catch {
-    return null; // storage blocked: don't track
+    return null;
   }
 }
 
@@ -44,7 +44,6 @@ function beacon(data: unknown) {
 
 function allowed() {
   try {
-    // visit /?notrack=1 once on your own devices to exclude yourself, /?notrack=0 to undo
     const q = new URLSearchParams(location.search).get("notrack");
     if (q === "1") localStorage.setItem("notrack", "1");
     if (q === "0") localStorage.removeItem("notrack");
@@ -71,7 +70,7 @@ export default function Tracker() {
     const { vid, sid, isNew } = ids;
 
     let viewId: number | null = null;
-    let active = 0; // ms the tab was visible on this page
+    let active = 0;
     let since: number | null =
       document.visibilityState === "visible" ? Date.now() : null;
 
@@ -117,7 +116,7 @@ export default function Tracker() {
     return () => {
       document.removeEventListener("visibilitychange", onVisibility);
       window.removeEventListener("pagehide", flush);
-      flush(); // route change: send time spent on the page we're leaving
+      flush();
     };
   }, [pathname]);
 
