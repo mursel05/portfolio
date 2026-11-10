@@ -54,19 +54,16 @@ float noise(vec2 p) {
 
 void main() {
   float g = uGlitch;
-  float t = floor(uTime * 30.0); // stepped time = jittery, like a real signal
+  float t = floor(uTime * 30.0);
   vec2 uv = vUv;
 
-  // soft low-frequency wobble across the whole shape
   uv.x += (noise(vec2(uv.y * 4.0, t * 0.7)) - 0.5) * 0.05 * g;
 
-  // one thin tear at a random height
   float y0 = hash(vec2(t, 3.0));
   float th = 0.03 + 0.06 * hash(vec2(t, 9.0));
   float inside = step(y0, uv.y) * step(uv.y, y0 + th);
   uv.x += (hash(vec2(t, 17.0)) - 0.5) * 2.0 * uTear * inside * g;
 
-  // chromatic split, only while glitching
   float s = 0.016 * g;
   float ar = texture2D(uTex, uv + vec2(s, 0.0)).a;
   float ag = texture2D(uTex, uv).a;
@@ -75,18 +72,15 @@ void main() {
   vec3 rgb = vec3(ar, ag, ab);
   float a = max(max(ar, ag), ab);
 
-  // mono mode: main copy plus faint ghosts
   float ma = max(ag, 0.4 * max(ar, ab));
   rgb = mix(rgb, vec3(ma), uMono);
   a = mix(a, ma, uMono);
 
   vec4 o = vec4(rgb * uColor, a);
 
-  // static dropout inside the letters
   float grain = hash(floor(vUv * uRes * 0.5) + t);
   float drop = step(0.82, grain) * g * 0.5;
 
-  // brightness flicker + faint scanlines
   float flick = 1.0 - g * 0.18 * hash(vec2(t, 5.0));
   float scan = 1.0 - g * 0.12 * step(0.5, fract(vUv.y * uRes.y / 3.0));
 

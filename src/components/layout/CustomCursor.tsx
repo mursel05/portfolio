@@ -16,7 +16,7 @@ export default function CustomCursor() {
 
     const el = cursorRef.current!;
     const root = document.documentElement;
-    root.classList.remove("has-custom-cursor");
+    root.classList.add("has-custom-cursor");
 
     gsap.set(el, {
       xPercent: -50,
@@ -52,10 +52,8 @@ export default function CustomCursor() {
 
     const onDown = () =>
       gsap.to(el, { scale: 0.8, duration: 0.15, overwrite: "auto" });
-    const onUp = (e: PointerEvent) => {
-      const hit = (e.target as Element | null)?.closest(INTERACTIVE);
-      gsap.to(el, { scale: hit ? 1 : 1, duration: 0.2, overwrite: "auto" });
-    };
+    const onUp = () =>
+      gsap.to(el, { scale: 1, duration: 0.2, overwrite: "auto" });
 
     const onLeave = () => {
       visible = false;

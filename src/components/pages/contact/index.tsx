@@ -1,15 +1,5 @@
+import { EMAIL, PHONE, socials } from "@/lib/info";
 import Form from "./Form";
-
-const EMAIL = "mursal.haxverdiyev@gmail.com";
-const PHONE = "+994 50 410 97 19";
-
-const socials = [
-  {
-    label: "linkedin",
-    href: "https://www.linkedin.com/in/mursal-hakhverdiyev/",
-  },
-  { label: "github", href: "https://github.com/mursel05" },
-];
 
 const eyebrow =
   "text-[#ADADAD] text-[0.75rem]/[1.05rem] md:text-[0.875rem]/[1.05rem] font-medium tracking-[-0.035rem] uppercase";
