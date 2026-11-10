@@ -9,6 +9,7 @@ import CustomScrollbar from "@/components/layout/CustomScrollbar";
 import { routing } from "@/i18n/routing";
 import CustomCursor from "@/components/layout/CustomCursor";
 import Tracker from "@/components/layout/Tracker";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -62,6 +63,15 @@ export default async function LocaleLayout({
             {children}
           </LenisProvider>
         </NextIntlClientProvider>
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B32WTL1HDH');
+          `}
+        </Script>
       </body>
     </html>
   );
