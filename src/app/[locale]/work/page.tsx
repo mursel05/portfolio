@@ -1,4 +1,4 @@
-import Footer from "@/components/pages/home/Footer";
+import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import Work from "@/components/pages/work";
 
