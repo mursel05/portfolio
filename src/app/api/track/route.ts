@@ -51,6 +51,13 @@ function sourceOf(referrer: string, search: string, host: string) {
 
 async function geo(req: Request) {
   const h = req.headers;
+
+  const ip =
+    h.get("cf-connecting-ip") ??
+    h.get("x-forwarded-for")?.split(",")[0].trim() ??
+    h.get("x-real-ip") ??
+    null;
+
   let country = h.get("x-vercel-ip-country") ?? h.get("cf-ipcountry");
   let city = h.get("x-vercel-ip-city") ?? h.get("cf-ipcity");
   if (city) {
@@ -58,9 +65,8 @@ async function geo(req: Request) {
       city = decodeURIComponent(city);
     } catch {}
   }
+
   if (!country || country === "XX") {
-    const ip =
-      h.get("x-forwarded-for")?.split(",")[0].trim() ?? h.get("x-real-ip");
     if (ip && !/^(::1|127\.|10\.|192\.168\.)/.test(ip)) {
       try {
         const r = await fetch(
@@ -75,7 +81,9 @@ async function geo(req: Request) {
       } catch {}
     }
   }
+
   return {
+    ip: ip ? ip.slice(0, 64) : null,
     country: country ? country.toUpperCase().slice(0, 2) : null,
     city: city || null,
   };
@@ -138,7 +146,7 @@ export async function POST(req: Request) {
 
   if (!existing) {
     const r = new UAParser(ua).getResult();
-    const { country, city } = await geo(req);
+    const { ip, country, city } = await geo(req);
 
     await prisma.visitor.upsert({
       where: { id: vid },
@@ -151,6 +159,7 @@ export async function POST(req: Request) {
         data: {
           id: sid,
           visitorId: vid,
+          ip,
           country,
           city,
           browser: r.browser.name ?? "Unknown",
