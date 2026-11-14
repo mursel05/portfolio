@@ -303,6 +303,11 @@ export default async function StatsPage({
                 <span className="text-[#0A0A0A] text-[1rem]/[1.375rem] font-medium">
                   {country(r.country)}
                   {r.city ? `, ${r.city}` : ""}
+                  {r.ip && (
+                    <span className={`${eyebrow} block text-[#ADADAD]`}>
+                      {r.ip}
+                    </span>
+                  )}
                 </span>
                 <span className="text-[#212325] text-[1rem]/[1.375rem]">
                   {r.device} · {r.browser} · {r.os}

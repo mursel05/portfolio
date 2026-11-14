@@ -25,6 +25,7 @@ model Session {
   browser      String?
   os           String?
   device       String? 
+  ip           String?
   views        PageView[]
 
   @@index([startedAt])
