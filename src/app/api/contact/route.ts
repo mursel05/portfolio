@@ -1,3 +1,4 @@
+import { EMAIL } from "@/lib/info";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -30,7 +31,8 @@ export async function POST(req: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
+  const fromEmail = process.env.RESEND_FROM_EMAIL;
+  const to = EMAIL;
 
   if (!apiKey || !to) {
     return NextResponse.json({ error: "Not configured" }, { status: 500 });
@@ -38,7 +40,7 @@ export async function POST(req: Request) {
 
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
-    from: "Portfolio",
+    from: `Mursal <${fromEmail}>`,
     to,
     replyTo: email,
     subject: `New message from ${name}`,
