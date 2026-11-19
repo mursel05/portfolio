@@ -22,9 +22,9 @@ const projects = [
   {
     name: "Jeff",
     type: "Company website",
-    stack: "Next.js · Tailwind CSS · GSAP",
+    stack: "Next.js · NestJS · PostgreSQL · Redis",
     description:
-      "Company website built with Next.js and Tailwind CSS, with smooth GSAP animations.",
+      "Full-stack company website with a Next.js frontend and a NestJS backend, using PostgreSQL for data storage.",
     image1: "/images/jeff-1.png",
     image2: "/images/jeff-2.png",
   },
@@ -42,38 +42,38 @@ const projects = [
 const experience = [
   {
     company: "Microsol",
-    role: "Frontend Developer",
-    period: "Mar 2026 – Nov 2026",
+    role: "Software Engineer",
+    period: "Feb 2026 – Nov 2026",
     summary:
-      "Responsive production apps with React, Next.js, TypeScript and Tailwind CSS. TanStack Query for server state, React Hook Form and Zod for complex forms.",
+      "Backend services and REST APIs with NestJS and TypeScript, database schemas and data access layers with Prisma and PostgreSQL. Production frontends in React and Next.js with TanStack Query, React Hook Form and Zod, plus GSAP and Three.js experiences.",
   },
   {
-    company: "Togetech",
-    role: "Software Engineer",
+    company: "TogeTech",
+    role: "Software Engineer (Freelance)",
     period: "Sep 2025 – Feb 2026",
     summary:
-      "Component-based interfaces across React, Next.js and Angular. Refactored shared UI into a consistent design system and implemented JWT auth flows.",
+      "Led a team delivering full-stack web and mobile apps with React, Angular, Ionic and NestJS. Designed REST APIs with JWT authentication and authorization, and PostgreSQL and MongoDB databases with TypeORM.",
   },
   {
     company: "SHI Studio",
-    role: "Software Engineer",
+    role: "Software Engineer (Freelance)",
     period: "Apr 2025 – Dec 2025",
     summary:
-      "Led delivery of frontend-heavy apps in Angular and React with TypeScript. Built reusable component systems and role-based UI behavior.",
+      "Full-stack web apps for clients with React, Next.js and NestJS: backend services, REST APIs, JWT authentication and authorization, and reusable frontend components.",
   },
   {
     company: "Prepare.sh",
     role: "Software Engineer",
     period: "Jul 2024 – Apr 2025",
     summary:
-      "Interactive screens and dashboard-style views in React and Svelte, with client-side validation, state management and API integrations.",
+      "Full-stack product features with React, Svelte and TypeScript: API integrations, authentication flows and third-party integrations. Contributed to Docker, Azure and GitHub Actions CI/CD workflows.",
   },
   {
     company: "Sabah.Hub",
     role: "Frontend Developer",
     period: "Apr 2023 – Nov 2024",
     summary:
-      "Accessible, optimized interfaces with React, SASS and TypeScript. Improved load performance and cross-device responsiveness.",
+      "Apartment Management startup product: accessible, optimized interfaces with React, Redux, TypeScript and SASS, built together with UI/UX designers and backend developers.",
   },
 ];
 
