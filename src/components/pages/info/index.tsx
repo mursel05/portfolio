@@ -3,35 +3,39 @@ import { Link } from "@/i18n/navigation";
 import { ArrowUpRight } from "lucide-react";
 
 const summary =
-  "Frontend developer experienced in building scalable, responsive web applications with React, Next.js, Angular and Svelte. I work with reusable UI components, state management, modern styling, REST API integration and performance optimization, with a focus on clean code and high-quality user experiences.";
+  "Full-stack developer designing and building scalable web and mobile applications. I build backend services and REST APIs with Node.js, NestJS, Express and TypeScript, handle authentication, authorization and database design with PostgreSQL and Prisma, and ship responsive interfaces with React, Next.js, Angular, Ionic and Svelte. Focused on clean architecture, maintainable code and performance.";
 
 const skills = [
   {
-    group: "Languages & Frameworks",
+    group: "Languages",
+    items: "JavaScript, TypeScript, HTML, CSS",
+  },
+  {
+    group: "Backend",
+    items: "Node.js, NestJS, Express.js, RESTful APIs, JWT, Prisma, TypeORM",
+  },
+  {
+    group: "Databases",
+    items: "PostgreSQL, MongoDB, Redis",
+  },
+  {
+    group: "Frontend",
     items:
-      "HTML, JavaScript, TypeScript, React, Next.js, Svelte, Angular, Node.js, NestJS",
+      "React, Next.js, Angular, Ionic, Svelte, Redux, Redux Toolkit, Zustand, TanStack Query, React Hook Form, Zod",
   },
   {
     group: "Styling & UI",
     items:
-      "Tailwind CSS, SASS, CSS, Bootstrap, Material UI, Shadcn, GSAP, Three.js",
+      "Tailwind CSS, SASS, Bootstrap, Material UI, Mantine, Shadcn UI, GSAP, Three.js",
   },
   {
-    group: "State Management",
-    items: "Redux, Redux Toolkit, Zustand",
-  },
-  {
-    group: "Tools & Platforms",
+    group: "DevOps & Cloud",
     items:
-      "Git, GitHub, GitLab, GitHub Actions (CI/CD), Docker, Firebase, AWS S3, Stripe, JWT",
+      "Docker, Docker Compose, GitHub Actions (CI/CD), Azure, AWS S3, Firebase",
   },
   {
-    group: "Database",
-    items: "PostgreSQL, Redis",
-  },
-  {
-    group: "Workflow",
-    items: "Jira, Slack, Bitrix",
+    group: "Tools & Workflow",
+    items: "Git, GitHub, GitLab, Jira, Slack, Stripe",
   },
 ];
 
@@ -84,7 +88,7 @@ export default function InfoPage() {
       <div className="flex flex-col gap-6 border-b border-[#6D6C6A] pb-8 md:flex-row md:items-end md:justify-between md:gap-8 md:pb-15">
         <h1 className={sectionTitle}>Info</h1>
         <p className={`${eyebrow} md:text-center whitespace-pre-line`}>
-          {"BASED IN: AZERBAIJAN\nROLE: FRONTEND DEVELOPER"}
+          {"BASED IN: AZERBAIJAN\nROLE: FULL-STACK DEVELOPER"}
         </p>
         <p className="text-start md:text-end text-[#ADADAD] font-medium text-[1rem]/[1.25rem] md:text-[1.125rem]/[1.3125rem] tracking-[-0.045rem] md:whitespace-pre-line">
           {"A bit about me, what I use\nand where I studied."}

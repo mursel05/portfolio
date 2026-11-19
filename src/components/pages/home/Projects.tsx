@@ -31,9 +31,9 @@ const projects = [
   {
     name: "Jeff",
     type: "Company website",
-    stack: "Next.js · Tailwind CSS · GSAP",
+    stack: "Next.js · NestJS · PostgreSQL · Redis",
     description:
-      "Company website built with Next.js and Tailwind CSS, with smooth GSAP animations.",
+      "Full-stack company website with a Next.js frontend and a NestJS backend, using PostgreSQL for data storage.",
     image1: "/images/jeff-1.png",
     image2: "/images/jeff-2.png",
   },

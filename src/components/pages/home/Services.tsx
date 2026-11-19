@@ -5,34 +5,40 @@ import { useState } from "react";
 
 const data = [
   {
-    title: "Web Applications",
-    subtitle: "React, Next.js and TypeScript",
+    title: "Full-Stack Web Applications",
+    subtitle: "Next.js, NestJS and PostgreSQL",
     description:
-      "Responsive, scalable web apps built with React, Next.js, TypeScript and Tailwind CSS, from dashboards and SaaS products to company websites. Also comfortable with Angular and Svelte when a project calls for it.",
+      "End-to-end products from database schema to UI: NestJS backends, Prisma and PostgreSQL, React and Next.js frontends, and payment integration with Paddle or Stripe, as in 3ssay and Jeff.",
   },
   {
-    title: "UI Components & Design Systems",
-    subtitle: "From Figma to reusable code",
+    title: "Backend & REST APIs",
+    subtitle: "Node.js, NestJS and Express",
     description:
-      "Pixel-accurate interfaces built from Figma designs, with reusable component libraries, consistent styling and cross-browser compatibility. Tailwind CSS, SASS, Shadcn and Material UI.",
+      "Backend services and RESTful APIs with clean, maintainable business logic, JWT-based authentication and authorization, and third-party integrations.",
+  },
+  {
+    title: "Databases & Data Modeling",
+    subtitle: "PostgreSQL, MongoDB and Redis",
+    description:
+      "Relational and NoSQL schema design, data access layers with Prisma and TypeORM, and query and data model optimization.",
+  },
+  {
+    title: "Frontend & Mobile",
+    subtitle: "React, Next.js, Angular and Ionic",
+    description:
+      "Responsive interfaces and reusable components with React, Next.js, Angular and Svelte, plus cross-platform mobile apps with Ionic. TanStack Query, React Hook Form and Zod for data and forms.",
+  },
+  {
+    title: "DevOps & Deployment",
+    subtitle: "Docker, GitHub Actions and Azure",
+    description:
+      "Containerized apps with Docker and Docker Compose, CI/CD pipelines with GitHub Actions, and deployments on Azure, with AWS S3 and Firebase where needed.",
   },
   {
     title: "Animation & Interactive 3D",
     subtitle: "GSAP and Three.js",
     description:
-      "Smooth scroll-driven animations and interactive 3D scenes that make a site feel alive, without hurting performance. Used on Morninx and Jeff.",
-  },
-  {
-    title: "API Integration & Auth",
-    subtitle: "REST, JWT and data fetching",
-    description:
-      "Connecting the frontend to REST APIs with TanStack Query, JWT-based authentication, role-based UI behavior, and complex forms validated with React Hook Form and Zod.",
-  },
-  {
-    title: "Full-Stack Development",
-    subtitle: "NestJS, Prisma and PostgreSQL",
-    description:
-      "End-to-end products when you need more than a frontend: NestJS backends, Prisma and PostgreSQL databases, and payment integration with Paddle or Stripe, as in the 3ssay platform.",
+      "Smooth scroll-driven animations and interactive 3D scenes that make a site feel alive, without hurting performance. Used on Morninx.",
   },
 ];
 
@@ -50,7 +56,7 @@ const Services = () => {
         </p>
         <p className="text-start md:text-end text-[#ADADAD] font-medium text-[1rem]/[1.25rem] md:text-[1.125rem]/[1.3125rem] tracking-[-0.045rem] md:whitespace-pre-line">
           {
-            "I build web apps, interfaces,\nanimations and the APIs\nbehind them."
+            "I build web apps end to end:\nAPIs, databases and the\ninterfaces on top of them."
           }
         </p>
       </div>

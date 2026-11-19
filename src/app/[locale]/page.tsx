@@ -7,18 +7,20 @@ import { Metadata } from "next";
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Mursal Haxverdiyev | Frontend Developer";
+  const title = "Mursal Haxverdiyev | Full-Stack Developer";
   const description =
-    "Frontend developer building fast, scalable and accessible web apps with React, Next.js and TypeScript. Selected projects, experience and contact.";
+    "Full-stack developer building scalable web apps with Node.js, NestJS, PostgreSQL, React and Next.js. Selected projects, experience and contact.";
   const siteName = "Mursal Haxverdiyev";
   const keywords = [
     "Mursal Haxverdiyev",
-    "frontend developer",
+    "full-stack developer",
+    "software engineer",
+    "Node.js developer",
+    "NestJS developer",
     "React developer",
     "Next.js developer",
     "TypeScript",
-    "GSAP",
-    "Three.js",
+    "PostgreSQL",
     "web developer Azerbaijan",
     "portfolio",
   ];

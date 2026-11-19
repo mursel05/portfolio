@@ -40,17 +40,17 @@ const Hero = () => {
       <div className="relative mt-auto px-5 md:px-10 pb-10 md:pb-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
         <p className={`${small} whitespace-pre-line`}>
           {
-            "Frontend developer building fast,\nscalable and accessible web apps\nwith clean, reusable code."
+            "Full-stack developer building scalable\nweb apps, from REST APIs and databases\nto fast, accessible interfaces."
           }
         </p>
         <p className={`${small} whitespace-pre-line md:text-center`}>
           {
-            "React · Next.js · TypeScript\nAngular · Svelte · Tailwind CSS\nGSAP · Three.js"
+            "Node.js · NestJS · TypeScript\nPostgreSQL · Prisma · Redis\nReact · Next.js · Docker"
           }
         </p>
         <p className={`${small} whitespace-pre-line md:text-end`}>
           {
-            "Frontend Developer @Microsol.\nPreviously Togetech, SHI Studio,\nPrepare.sh and Sabah.Hub."
+            "Software Engineer @Microsol.\nPreviously TogeTech, SHI Studio,\nPrepare.sh and Sabah.Hub."
           }
         </p>
       </div>

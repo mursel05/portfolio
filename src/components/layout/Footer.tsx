@@ -35,7 +35,7 @@ const Footer = () => {
           something together
         </h2>
         <p className="text-start md:text-end text-[#ADADAD] font-medium text-[1rem]/[1.25rem] md:text-[1.125rem]/[1.3125rem] tracking-[-0.045rem] md:whitespace-pre-line">
-          {"Open to new projects,\ncollaborations and\nfrontend roles."}
+          {"Open to new projects,\ncollaborations and\nfull-stack roles."}
         </p>
       </div>
 
@@ -93,7 +93,7 @@ const Footer = () => {
       <div className="flex items-center justify-between gap-4 border-t border-[#6D6C6A] py-5 md:py-7">
         <p className={label}>© {new Date().getFullYear()} Mursal Haxverdiyev</p>
         <p className={`${label} hidden md:block`}>
-          Frontend Developer @Microsol
+          Software Engineer @Microsol
         </p>
         <button
           type="button"
