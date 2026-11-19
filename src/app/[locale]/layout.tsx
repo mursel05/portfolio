@@ -54,7 +54,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${antonSc.variable} ${geist.variable}`}>
-      <body>
+      <body className="flex">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LenisProvider>
             <Tracker />
