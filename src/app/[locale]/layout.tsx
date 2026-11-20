@@ -10,10 +10,24 @@ import { routing } from "@/i18n/routing";
 import CustomCursor from "@/components/layout/CustomCursor";
 import Tracker from "@/components/layout/Tracker";
 import Script from "next/script";
+import {
+  JOB_TITLE,
+  NAME,
+  SITE_URL,
+  jsonLdString,
+  personJsonLd,
+  robots,
+} from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "A modern portfolio website built with Next.js and TypeScript.",
+  metadataBase: new URL(SITE_URL),
+  title: { default: `${NAME} | ${JOB_TITLE}`, template: `%s | ${NAME}` },
+  description:
+    "Mursal Haxverdiyev is a full-stack developer from Azerbaijan building scalable web apps with Node.js, NestJS, PostgreSQL, React and Next.js.",
+  applicationName: NAME,
+  authors: [{ name: NAME, url: SITE_URL }],
+  creator: NAME,
+  robots,
 };
 
 export const viewport: Viewport = {
@@ -55,6 +69,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${antonSc.variable} ${geist.variable}`}>
       <body className="flex">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdString(personJsonLd()) }}
+        />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LenisProvider>
             <Tracker />

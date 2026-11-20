@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { COOKIE, authToken, checkPassword, isAuthed } from "@/lib/auth";
 import { getStats, TZ, type Range } from "@/lib/stats";
+import { getPathname } from "@/i18n/navigation";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -97,7 +98,7 @@ export default async function StatsPage({
 }) {
   const { locale } = await params;
   const sp = await searchParams;
-  const base = `/${locale}/stats`;
+  const base = getPathname({ href: "/stats", locale });
 
   async function login(fd: FormData) {
     "use server";
