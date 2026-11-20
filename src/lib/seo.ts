@@ -10,7 +10,7 @@ export const INDEXABLE =
   (process.env.VERCEL_ENV ?? "production") === "production";
 
 export const NAME = "Mursal Haxverdiyev";
-export const ALTERNATE_NAMES = ["Mursal Hakhverdiyev", "Mürsəl Haxverdiyev"];
+export const ALTERNATE_NAMES = ["Mürsəl Haxverdiyev"];
 export const JOB_TITLE = "Full-Stack Developer";
 
 const OG_IMAGE = {
@@ -100,7 +100,6 @@ export function personJsonLd() {
         image: `${SITE_URL}${OG_IMAGE.url}`,
         email: `mailto:${EMAIL}`,
         jobTitle: [JOB_TITLE, "Software Engineer"],
-        worksFor: { "@type": "Organization", name: "Microsol" },
         alumniOf: {
           "@type": "CollegeOrUniversity",
           name: "The Academy of Public Administration Under the President of the Republic of Azerbaijan",
