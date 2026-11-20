@@ -83,7 +83,7 @@ const Footer = () => {
       <div className="flex items-center justify-between gap-4 border-t border-[#6D6C6A] py-5 md:py-7">
         <p className={label}>© {new Date().getFullYear()} Mursal Haxverdiyev</p>
         <p className={`${label} hidden md:block`}>
-          Software Engineer @Microsol
+          Software Engineer
         </p>
         <button
           type="button"
