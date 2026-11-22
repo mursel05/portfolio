@@ -16,7 +16,7 @@ export default function NotFoundPage() {
   const t = useTranslations("notFound");
 
   return (
-    <main className="flex min-h-svh flex-col justify-between overflow-hidden bg-[#0A0A0A] px-5 py-5 text-[#F3F0EC] selection:bg-[#F3F0EC] selection:text-[#0A0A0A] md:px-10 md:py-7">
+    <main className="flex min-h-svh w-full flex-col justify-between overflow-hidden bg-[#0A0A0A] px-5 py-5 text-[#F3F0EC] selection:bg-[#F3F0EC] selection:text-[#0A0A0A] md:px-10 md:py-7">
       <div className="flex items-center justify-between border-b border-[#6D6C6A] pb-5 md:pb-7">
         <p className={`${small} text-[#ADADAD]`}>{t("error")}</p>
         <p className={`${small} text-[#ADADAD]`}>{t("title")}</p>

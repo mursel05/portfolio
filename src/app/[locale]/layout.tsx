@@ -55,9 +55,9 @@ const antonSc = Anton_SC({
   variable: "--font-anton-sc",
 });
 
-// Anton SC has no Cyrillic, so Russian display text falls back to Oswald (see .font-anton).
+// Anton SC has no Cyrillic, so the Russian locale uses Oswald for display text (see globals.css).
 const oswald = Oswald({
-  subsets: ["cyrillic"],
+  subsets: ["latin", "cyrillic"],
   weight: "700",
   variable: "--font-oswald",
   preload: false,

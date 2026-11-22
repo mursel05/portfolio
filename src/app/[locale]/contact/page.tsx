@@ -22,7 +22,7 @@ export async function generateMetadata({
 
 const ContactPage = () => {
   return (
-    <div>
+    <div className="w-full min-w-0">
       <Navbar />
       <Contact />
       <Footer />

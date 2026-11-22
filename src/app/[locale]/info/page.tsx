@@ -22,7 +22,7 @@ export async function generateMetadata({
 
 const InfoPage = () => {
   return (
-    <div>
+    <div className="w-full min-w-0">
       <Navbar />
       <Info />
       <Footer />

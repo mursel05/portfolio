@@ -47,7 +47,12 @@ html[data-scroll-locked] .custom-scrollbar {
 }
 
 .font-anton {
-  font-family: var(--font-anton-sc), var(--font-oswald), sans-serif !important;
+  font-family: var(--font-anton-sc), sans-serif !important;
+}
+
+/* Anton SC has no Cyrillic glyphs; use Oswald for the whole display font in Russian. */
+html:lang(ru) .font-anton {
+  font-family: var(--font-oswald), sans-serif !important;
 }
 
 .hide-scrollbar {
