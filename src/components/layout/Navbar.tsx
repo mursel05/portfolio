@@ -2,24 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import LocaleSwitcher from "@/components/layout/LocaleSwitcher";
 
 const links = [
-  { label: "home", href: "/" },
-  { label: "work", href: "/work" },
-  { label: "info", href: "/info" },
-  { label: "contact", href: "/contact" },
-];
-
-const socials = [
-  {
-    label: "linkedin",
-    href: "https://www.linkedin.com/in/mursal-hakhverdiyev/",
-  },
-  { label: "github", href: "https://github.com/mursel05" },
-];
-
-const EMAIL = "mursal.haxverdiyev@gmail.com";
+  { key: "home", href: "/" },
+  { key: "work", href: "/work" },
+  { key: "info", href: "/info" },
+  { key: "contact", href: "/contact" },
+] as const;
 
 const small =
   "text-[0.75rem]/[1.05rem] md:text-[0.875rem]/[1.05rem] font-medium tracking-[-0.035rem] uppercase";
@@ -32,6 +24,7 @@ export default function Navbar() {
   const tlRef = useRef<gsap.core.Timeline | null>(null);
   const pathname = usePathname();
   const firstRender = useRef(true);
+  const t = useTranslations("nav");
 
   useEffect(() => {
     const overlay = overlayRef.current!;
@@ -100,7 +93,7 @@ export default function Navbar() {
         className={`fixed inset-0 z-50 flex flex-col justify-between bg-[#0A0A0A] px-5 pb-6 pt-24 [clip-path:inset(0_0_100%_0)] md:px-10 md:py-20 ${
           open ? "" : "pointer-events-none"
         }`}>
-        <nav aria-label="Main">
+        <nav aria-label={t("main")}>
           <ul className="group/list flex flex-col">
             {links
               .filter((l) => l.href !== (pathname === "" ? "/" : pathname))
@@ -115,7 +108,7 @@ export default function Navbar() {
                       0{i + 1}
                     </span>
                     <span className="font-anton uppercase text-[clamp(3.5rem,14vw,12rem)] leading-[0.95] tracking-[-0.02em] text-[#F3F0EC]">
-                      {l.label}
+                      {t(l.key)}
                     </span>
                   </Link>
                 </li>
@@ -131,14 +124,17 @@ export default function Navbar() {
           Mursal
         </Link>
 
-        <button
-          type="button"
-          aria-expanded={open}
-          aria-controls="site-menu"
-          onClick={() => setOpen((v) => !v)}
-          className={`${bar} flex cursor-pointer items-center gap-2 transition-opacity duration-300 hover:opacity-60`}>
-          {open ? "Close" : "Menu"}
-        </button>
+        <div className="flex items-center gap-6 md:gap-10">
+          <LocaleSwitcher className={bar} />
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-controls="site-menu"
+            onClick={() => setOpen((v) => !v)}
+            className={`${bar} flex cursor-pointer items-center gap-2 transition-opacity duration-300 hover:opacity-60`}>
+            {open ? t("close") : t("menu")}
+          </button>
+        </div>
       </header>
     </>
   );

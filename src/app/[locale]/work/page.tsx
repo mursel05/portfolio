@@ -3,13 +3,22 @@ import Navbar from "@/components/layout/Navbar";
 import Work from "@/components/pages/work";
 import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = pageMetadata({
-  title: "Work & Experience",
-  description:
-    "Selected projects by Mursal Haxverdiyev (Morninx, 3ssay, Jeff, Hiri, STORO) and experience at Microsol, TogeTech, SHI Studio, Prepare.sh and Sabah.Hub.",
-  path: "/work",
-});
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return pageMetadata({
+    title: t("work.title"),
+    description: t("work.description"),
+    path: "/work",
+    locale,
+  });
+}
 
 const WorkPage = () => {
   return (

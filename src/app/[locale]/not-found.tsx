@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight } from "lucide-react";
 import GlitchText from "@/components/ui/GlitchText";
+import { useTranslations } from "next-intl";
 
 const small =
   "text-[0.75rem]/[1.05rem] md:text-[0.875rem]/[1.05rem] font-medium tracking-[-0.035rem] uppercase";
@@ -12,18 +13,19 @@ const bar =
 
 export default function NotFoundPage() {
   const pathname = usePathname();
+  const t = useTranslations("notFound");
 
   return (
     <main className="flex min-h-svh flex-col justify-between overflow-hidden bg-[#0A0A0A] px-5 py-5 text-[#F3F0EC] selection:bg-[#F3F0EC] selection:text-[#0A0A0A] md:px-10 md:py-7">
       <div className="flex items-center justify-between border-b border-[#6D6C6A] pb-5 md:pb-7">
-        <p className={`${small} text-[#ADADAD]`}>Error</p>
-        <p className={`${small} text-[#ADADAD]`}>Page not found</p>
+        <p className={`${small} text-[#ADADAD]`}>{t("error")}</p>
+        <p className={`${small} text-[#ADADAD]`}>{t("title")}</p>
       </div>
 
       <div className="relative flex flex-1 items-center justify-center">
         <GlitchText
           text="404"
-          label="404, page not found"
+          label={t("label")}
           className="select-none font-anton text-[clamp(7rem,min(36vw,50svh),40rem)] leading-[0.85] tracking-[-0.02em]"
         />
       </div>
@@ -40,13 +42,13 @@ export default function NotFoundPage() {
             type="button"
             onClick={() => window.history.back()}
             className={`${bar} cursor-pointer text-start text-[#ADADAD] transition-opacity duration-300 hover:opacity-60`}>
-            Go back
+            {t("goBack")}
           </button>
 
           <Link
             href="/"
             className="group flex w-full items-center justify-between gap-6 bg-[#F3F0EC] px-6 py-5 text-[#0A0A0A] text-[1rem] font-semibold tracking-[-0.0625rem] uppercase transition-opacity duration-300 hover:opacity-80 md:w-auto md:min-w-64">
-            Back home
+            {t("backHome")}
             <ArrowUpRight
               size={18}
               className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

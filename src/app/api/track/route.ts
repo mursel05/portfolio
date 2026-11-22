@@ -7,7 +7,7 @@ export const runtime = "nodejs";
 const ID = /^[A-Za-z0-9-]{8,64}$/;
 const BOT =
   /bot|crawl|spider|slurp|headless|lighthouse|pagespeed|preview|facebookexternalhit|curl|wget|python|axios|node-fetch|monitor|uptime/i;
-const LOCALES = ["en", "az"];
+const LOCALES = ["en", "az", "ru"];
 
 const SOURCES: [RegExp, string][] = [
   [/(^|\.)google\./, "google"],

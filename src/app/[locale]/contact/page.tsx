@@ -3,13 +3,22 @@ import Contact from "@/components/pages/contact";
 import Navbar from "@/components/layout/Navbar";
 import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = pageMetadata({
-  title: "Contact",
-  description:
-    "Contact Mursal Haxverdiyev about full-stack roles, freelance projects or collaborations. Email, phone, LinkedIn and GitHub.",
-  path: "/contact",
-});
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return pageMetadata({
+    title: t("contact.title"),
+    description: t("contact.description"),
+    path: "/contact",
+    locale,
+  });
+}
 
 const ContactPage = () => {
   return (

@@ -4,58 +4,13 @@ import { useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
+import { projects } from "@/lib/work";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SCROLL_PER_ITEM = 300;
 
-const projects = [
-  {
-    name: "Morninx",
-    type: "Company website",
-    stack: "Next.js · Tailwind CSS · Three.js · GSAP",
-    description:
-      "Interactive 3D model built with Three.js, with the whole page animated using GSAP.",
-    image1: "/images/morninx-1.png",
-    image2: "/images/morninx-2.png",
-  },
-  {
-    name: "3ssay",
-    type: "AI-powered essay evaluation platform",
-    stack: "Next.js · TypeScript · NestJS · Prisma · PostgreSQL · Paddle",
-    description:
-      "Evaluates essays with AI, generating numerical scores and detailed feedback.",
-    image1: "/images/3ssay-1.png",
-    image2: "/images/3ssay-2.png",
-  },
-  {
-    name: "Jeff",
-    type: "Company website",
-    stack: "Next.js · NestJS · PostgreSQL · Redis",
-    description:
-      "Full-stack company website with a Next.js frontend and a NestJS backend, using PostgreSQL for data storage.",
-    image1: "/images/jeff-1.png",
-    image2: "/images/jeff-2.png",
-  },
-  {
-    name: "Hiri",
-    type: "Job posting and application platform",
-    stack: "React · Next.js · Tailwind CSS",
-    description:
-      "Hybrid React and Next.js platform where employers post jobs and candidates apply.",
-    image1: "/images/hiri-1.png",
-    image2: "/images/hiri-2.png",
-  },
-  {
-    name: "STORO",
-    type: "Digital commerce platform",
-    stack: "Next.js · NestJS · TypeScript · Prisma · PostgreSQL · Redis · Tailwind CSS · GSAP",
-    description:
-      "Digital commerce platform that brings together wholesalers, sellers and buyers, with online storefronts businesses can set up from ready-made templates.",
-    image1: "/images/storo-1.png",
-    image2: "/images/storo-2.png",
-  },
-];
 
 const TOTAL = projects.length;
 
@@ -67,6 +22,7 @@ const Projects = () => {
   const trackRef = useRef<HTMLDivElement>(null);
   const activeRef = useRef(0);
   const [active, setActive] = useState(0);
+  const t = useTranslations("projects");
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -116,7 +72,7 @@ const Projects = () => {
         <Image
           key={p[key]}
           src={p[key]}
-          alt={`${p.name} ${label}`}
+          alt={t("screenshot", { name: p.name, n: label })}
           width={2000}
           height={1000}
           sizes="(min-width: 768px) 45vw, 100vw"
@@ -138,11 +94,11 @@ const Projects = () => {
       ref={sectionRef}
       className="flex h-svh flex-col justify-center gap-4 overflow-hidden px-5 py-6 md:px-10 md:py-10">
       <h2 className="text-[#0A0A0A] text-[3rem]/[2.5rem] md:text-[5.625rem]/[4.5rem] font-medium tracking-[-0.0313rem] uppercase">
-        Projects
+        {t("title")}
       </h2>
       <div className="flex md:justify-end">
         <p className="md:w-80 md:text-end text-[#0A0A0A] text-[0.875rem]/[1.25rem] md:text-[1rem]/[1.5rem] tracking-[-0.0313rem] whitespace-pre-line">
-          {current.description}
+          {t(`items.${current.id}.description`)}
         </p>
       </div>
 

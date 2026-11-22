@@ -1,1 +1,209 @@
-{}
+{
+  "nav": {
+    "home": "ana səhifə",
+    "work": "işlər",
+    "info": "haqqımda",
+    "contact": "əlaqə",
+    "menu": "Menyu",
+    "close": "Bağla",
+    "main": "Əsas",
+    "language": "Dil"
+  },
+  "common": {
+    "sayHello": "Salam yaz",
+    "navigate": "Keçidlər",
+    "social": "Sosial",
+    "phone": "Telefon",
+    "email": "E-poçt",
+    "top": "yuxarı",
+    "role": "Proqram mühəndisi",
+    "present": "İndi",
+    "letsBuild": "Gəlin birlikdə",
+    "somethingTogether": "nəsə quraq",
+    "openTo": "Yeni layihələrə,\nəməkdaşlıqlara və\nfull-stack vakansiyalara açığam."
+  },
+  "hero": {
+    "greeting": "Salam, mən",
+    "name": "Mursal",
+    "intro": "REST API və verilənlər bazasından\nsürətli, əlçatan interfeyslərə qədər\nmiqyaslana bilən veb tətbiqlər qururam.",
+    "background": "Proqram mühəndisi.\nƏvvəllər Microsol, TogeTech,\nSHI Studio, Prepare.sh və Sabah.Hub."
+  },
+  "projects": {
+    "title": "Layihələr",
+    "screenshot": "{name}, ekran görüntüsü {n}",
+    "items": {
+      "morninx": {
+        "type": "Şirkət saytı",
+        "description": "Three.js ilə interaktiv 3D model, bütün səhifə GSAP ilə animasiyalı."
+      },
+      "3ssay": {
+        "type": "Süni intellektlə esse qiymətləndirmə platforması",
+        "description": "Esseləri süni intellektlə qiymətləndirir: bal və ətraflı rəy verir."
+      },
+      "jeff": {
+        "type": "Şirkət saytı",
+        "description": "Next.js üzərində şirkət saytı, NestJS və PostgreSQL backend ilə."
+      },
+      "hiri": {
+        "type": "Vakansiya və müraciət platforması",
+        "description": "İşəgötürənlərin vakansiya yerləşdirdiyi, namizədlərin müraciət etdiyi platforma."
+      },
+      "storo": {
+        "type": "Rəqəmsal ticarət platforması",
+        "description": "Topdansatıcıları, satıcıları və alıcıları birləşdirən ticarət platforması."
+      }
+    }
+  },
+  "services": {
+    "title": "Xidmətlər",
+    "imageAlt": "Xidmətlər",
+    "stats": "Təcrübə: 3+ il\nŞirkətlər: 5\nSeçilmiş layihələr: {count}",
+    "intro": "Veb tətbiqləri başdan sona qururam:\nAPI-lər, verilənlər bazaları və\nonların üzərindəki interfeyslər.",
+    "items": {
+      "fullstack": {
+        "title": "Full-stack veb tətbiqlər",
+        "subtitle": "Next.js, NestJS və PostgreSQL",
+        "description": "Verilənlər bazası sxemindən interfeysə qədər tam məhsullar: NestJS backend, Prisma və PostgreSQL, React və Next.js frontend, Paddle və ya Stripe ilə ödəniş inteqrasiyası. 3ssay və Jeff layihələrində olduğu kimi."
+      },
+      "backend": {
+        "title": "Backend və REST API",
+        "subtitle": "Node.js, NestJS və Express",
+        "description": "Təmiz, rahat saxlanılan biznes məntiqi olan backend servisləri və RESTful API-lər, JWT əsaslı autentifikasiya və avtorizasiya, üçüncü tərəf inteqrasiyaları."
+      },
+      "databases": {
+        "title": "Verilənlər bazası və modelləşdirmə",
+        "subtitle": "PostgreSQL, MongoDB və Redis",
+        "description": "Relyasiyalı və NoSQL sxem dizaynı, Prisma və TypeORM ilə məlumat təbəqələri, sorğu və məlumat modelinin optimallaşdırılması."
+      },
+      "frontend": {
+        "title": "Frontend və mobil",
+        "subtitle": "React, Next.js, Angular və Ionic",
+        "description": "React, Next.js, Angular və Svelte ilə adaptiv interfeyslər və təkrar istifadə olunan komponentlər, Ionic ilə kross-platform mobil tətbiqlər. Məlumat və formalar üçün TanStack Query, React Hook Form və Zod."
+      },
+      "devops": {
+        "title": "DevOps və deploy",
+        "subtitle": "Docker, GitHub Actions və Azure",
+        "description": "Docker və Docker Compose ilə konteynerləşdirilmiş tətbiqlər, GitHub Actions ilə CI/CD, Azure-da deploy, lazım olduqda AWS S3 və Firebase."
+      },
+      "animation": {
+        "title": "Animasiya və interaktiv 3D",
+        "subtitle": "GSAP və Three.js",
+        "description": "Performansa zərər vermədən sayta canlılıq qatan, scroll-a bağlı axıcı animasiyalar və interaktiv 3D səhnələr. Morninx-də istifadə olunub."
+      }
+    }
+  },
+  "work": {
+    "title": "İşlər",
+    "stats": "Layihələr: {projects}\nŞirkətlər: {companies}",
+    "intro": "Seçilmiş layihələr və\nonları harada qurmuşam.",
+    "selected": "Seçilmiş layihələr",
+    "experience": "Təcrübə",
+    "items": {
+      "microsol": {
+        "role": "Proqram mühəndisi",
+        "summary": "NestJS və TypeScript ilə backend servisləri və REST API-lər, Prisma və PostgreSQL ilə verilənlər bazası sxemləri və məlumat təbəqələri. TanStack Query, React Hook Form və Zod ilə React və Next.js üzərində production frontendlər, GSAP və Three.js ilə interaktiv təcrübələr."
+      },
+      "togetech": {
+        "role": "Proqram mühəndisi (Frilans)",
+        "summary": "React, Angular, Ionic və NestJS ilə full-stack veb və mobil tətbiqlər hazırlayan komandaya rəhbərlik etdim. JWT autentifikasiya və avtorizasiyalı REST API-lər, TypeORM ilə PostgreSQL və MongoDB verilənlər bazaları dizayn etdim."
+      },
+      "shi": {
+        "role": "Proqram mühəndisi (Frilans)",
+        "summary": "Müştərilər üçün React, Next.js və NestJS ilə full-stack veb tətbiqlər: backend servisləri, REST API-lər, JWT autentifikasiya və avtorizasiya, təkrar istifadə olunan frontend komponentləri."
+      },
+      "prepare": {
+        "role": "Proqram mühəndisi",
+        "summary": "React, Svelte və TypeScript ilə full-stack məhsul funksiyaları: API inteqrasiyaları, autentifikasiya axınları və üçüncü tərəf inteqrasiyaları. Docker, Azure və GitHub Actions CI/CD proseslərinə töhfə verdim."
+      },
+      "sabah": {
+        "role": "Frontend developer",
+        "summary": "Apartment Management startap məhsulu: UI/UX dizaynerlər və backend developerlərlə birlikdə React, Redux, TypeScript və SASS ilə əlçatan, optimallaşdırılmış interfeyslər."
+      }
+    }
+  },
+  "info": {
+    "title": "Haqqımda",
+    "facts": "Yer: Azərbaycan\nRol: Full-stack developer",
+    "intro": "Bir az özüm haqqında, nədən istifadə\netdiyim və harada oxuduğum.",
+    "about": "Haqqımda",
+    "summary": "Miqyaslana bilən veb və mobil tətbiqlər dizayn edib quran full-stack developerəm. Node.js, NestJS, Express və TypeScript ilə backend servisləri və REST API-lər qururam, PostgreSQL və Prisma ilə autentifikasiya, avtorizasiya və verilənlər bazası dizaynını həll edirəm, React, Next.js, Angular, Ionic və Svelte ilə adaptiv interfeyslər hazırlayıram. Təmiz arxitektura, rahat saxlanılan kod və performansa fokuslanıram.",
+    "getInTouch": "Əlaqə saxla",
+    "skills": "Bacarıqlar",
+    "skillGroups": {
+      "languages": "Dillər",
+      "backend": "Backend",
+      "databases": "Verilənlər bazaları",
+      "frontend": "Frontend",
+      "styling": "Stil və UI",
+      "devops": "DevOps və bulud",
+      "tools": "Alətlər və iş prosesi"
+    },
+    "education": "Təhsil",
+    "degrees": {
+      "master": "Rəqəmsal hökumət, magistr",
+      "bachelor": "Kompüter elmləri, bakalavr"
+    },
+    "school": "Azərbaycan Respublikasının Prezidenti yanında Dövlət İdarəçilik Akademiyası",
+    "gpa": "Orta bal: 95.3/100",
+    "certificates": "Sertifikatlar",
+    "certificateNames": {
+      "codedamn": "Learn the basics of web: Internet fundamentals",
+      "restApi": "REST API (Intermediate)",
+      "figma": "Get Started with Figma",
+      "javascript": "JavaScript",
+      "frontend": "Frontend Development"
+    },
+    "languages": "Dillər",
+    "languageList": {
+      "az": "Azərbaycan dili",
+      "en": "İngilis dili"
+    },
+    "levels": {
+      "native": "Ana dili",
+      "upperIntermediate": "Orta səviyyədən yuxarı"
+    }
+  },
+  "contact": {
+    "title": "Əlaqə",
+    "intro": "Ağlında layihə və ya vakansiya var?\nMesaj göndər.",
+    "languages": "Dillər",
+    "languageValue": "Azərbaycan · İngilis"
+  },
+  "form": {
+    "name": "Ad",
+    "namePlaceholder": "Adınız",
+    "email": "E-poçt",
+    "emailPlaceholder": "siz@example.com",
+    "message": "Mesaj",
+    "messagePlaceholder": "Layihəniz haqqında yazın",
+    "send": "Mesaj göndər",
+    "sending": "Göndərilir...",
+    "sent": "Təşəkkürlər, tezliklə cavab verəcəyəm.",
+    "error": "Xəta baş verdi. Zəhmət olmasa birbaşa e-poçt göndərin."
+  },
+  "notFound": {
+    "error": "Xəta",
+    "title": "Səhifə tapılmadı",
+    "label": "404, səhifə tapılmadı",
+    "goBack": "Geri qayıt",
+    "backHome": "Ana səhifə"
+  },
+  "meta": {
+    "jobTitle": "Full-Stack Developer",
+    "home": {
+      "description": "Mursal Haxverdiyev, Node.js, NestJS, PostgreSQL, React və Next.js ilə miqyaslana bilən veb tətbiqlər quran azərbaycanlı full-stack developer."
+    },
+    "work": {
+      "title": "İşlər və təcrübə",
+      "description": "Mursal Haxverdiyevin seçilmiş layihələri (Morninx, 3ssay, Jeff, Hiri, STORO) və Microsol, TogeTech, SHI Studio, Prepare.sh və Sabah.Hub-da iş təcrübəsi."
+    },
+    "info": {
+      "title": "Haqqımda, bacarıqlar və təhsil",
+      "description": "Mursal Haxverdiyev haqqında: Azərbaycanda yaşayan full-stack developer. TypeScript, Node.js, NestJS, React, Next.js və PostgreSQL bacarıqları, təhsil və sertifikatlar."
+    },
+    "contact": {
+      "title": "Əlaqə",
+      "description": "Full-stack vakansiyalar, frilans layihələr və ya əməkdaşlıq üçün Mursal Haxverdiyevlə əlaqə. E-poçt, telefon, LinkedIn və GitHub."
+    }
+  }
+}
