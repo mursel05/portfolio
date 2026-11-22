@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -12,6 +13,7 @@ const field =
 
 const Form = () => {
   const [status, setStatus] = useState<Status>("idle");
+  const t = useTranslations("form");
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,40 +43,40 @@ const Form = () => {
       className="flex flex-col gap-8"
       noValidate={false}>
       <label className="flex flex-col gap-1">
-        <span className={eyebrow}>01 / Name</span>
+        <span className={eyebrow}>01 / {t("name")}</span>
         <input
           name="name"
           type="text"
           required
           maxLength={100}
           autoComplete="name"
-          placeholder="Your name"
+          placeholder={t("namePlaceholder")}
           className={field}
         />
       </label>
 
       <label className="flex flex-col gap-1">
-        <span className={eyebrow}>02 / Email</span>
+        <span className={eyebrow}>02 / {t("email")}</span>
         <input
           name="email"
           type="email"
           required
           maxLength={150}
           autoComplete="email"
-          placeholder="you@example.com"
+          placeholder={t("emailPlaceholder")}
           className={field}
         />
       </label>
 
       <label className="flex flex-col gap-1">
-        <span className={eyebrow}>03 / Message</span>
+        <span className={eyebrow}>03 / {t("message")}</span>
         <textarea
           name="message"
           required
           minLength={10}
           maxLength={3000}
           rows={5}
-          placeholder="Tell me about your project"
+          placeholder={t("messagePlaceholder")}
           className={`${field} resize-none`}
         />
       </label>
@@ -93,7 +95,7 @@ const Form = () => {
           type="submit"
           disabled={status === "sending"}
           className="group flex w-full cursor-pointer items-center justify-between gap-6 bg-[#0A0A0A] px-6 py-5 text-[#F3F0EC] text-[1rem] font-semibold tracking-[-0.0625rem] uppercase transition-opacity duration-300 hover:opacity-80 disabled:cursor-not-allowed disabled:opacity-50 md:w-auto md:min-w-64">
-          {status === "sending" ? "Sending..." : "Send message"}
+          {status === "sending" ? t("sending") : t("send")}
           <ArrowUpRight
             size={18}
             className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -104,9 +106,8 @@ const Form = () => {
           role="status"
           aria-live="polite"
           className={`${eyebrow} ${status === "error" ? "text-red-600!" : ""}`}>
-          {status === "sent" && "Thanks, I'll get back to you soon."}
-          {status === "error" &&
-            "Something went wrong. Please email me directly."}
+          {status === "sent" && t("sent")}
+          {status === "error" && t("error")}
         </p>
       </div>
     </form>

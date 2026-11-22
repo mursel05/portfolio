@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { EMAIL, socials } from "@/lib/info";
+import { routing } from "@/i18n/routing";
 
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_APP_URL || "https://mursal.dev"
@@ -34,27 +35,55 @@ export const robots: Metadata["robots"] = INDEXABLE
     }
   : { index: false, follow: false };
 
+const OG_LOCALES: Record<string, string> = {
+  en: "en_US",
+  az: "az_AZ",
+  ru: "ru_RU",
+};
+
+/** URL path for a page in a locale; the default locale has no prefix (localePrefix: "as-needed"). */
+export function localizedPath(locale: string, path: string) {
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  return `${prefix}${path}` || "/";
+}
+
+/** hreflang alternates for a page, including x-default. */
+export function languageAlternates(path: string) {
+  return {
+    ...Object.fromEntries(
+      routing.locales.map((l) => [l, localizedPath(l, path)]),
+    ),
+    "x-default": localizedPath(routing.defaultLocale, path),
+  };
+}
+
 export function pageMetadata({
   title,
   description,
   path,
+  locale,
 }: {
   title: string;
   description: string;
   /** Path without locale prefix, e.g. "" or "/work". */
   path: string;
+  locale: string;
 }): Metadata {
   const fullTitle = path ? `${title} | ${NAME}` : title;
+  const url = localizedPath(locale, path);
 
   return {
     title: { absolute: fullTitle },
     description,
-    alternates: { canonical: path || "/" },
+    alternates: { canonical: url, languages: languageAlternates(path) },
     openGraph: {
       type: "website",
-      url: path || "/",
+      url,
       siteName: NAME,
-      locale: "en_US",
+      locale: OG_LOCALES[locale] ?? OG_LOCALES.en,
+      alternateLocale: routing.locales
+        .filter((l) => l !== locale)
+        .map((l) => OG_LOCALES[l]),
       title: fullTitle,
       description,
       images: [OG_IMAGE],
@@ -68,7 +97,7 @@ export function pageMetadata({
   };
 }
 
-export function personJsonLd() {
+export function personJsonLd(locale: string = routing.defaultLocale) {
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -78,13 +107,14 @@ export function personJsonLd() {
         url: SITE_URL,
         name: NAME,
         alternateName: ALTERNATE_NAMES,
-        inLanguage: "en",
+        inLanguage: [...routing.locales],
         publisher: { "@id": `${SITE_URL}/#person` },
       },
       {
         "@type": "ProfilePage",
         "@id": `${SITE_URL}/#profilepage`,
-        url: SITE_URL,
+        url: `${SITE_URL}${localizedPath(locale, "")}`.replace(/\/$/, ""),
+        inLanguage: locale,
         name: `${NAME} | ${JOB_TITLE}`,
         isPartOf: { "@id": `${SITE_URL}/#website` },
         mainEntity: { "@id": `${SITE_URL}/#person` },
