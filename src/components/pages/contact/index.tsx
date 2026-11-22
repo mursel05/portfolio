@@ -46,6 +46,7 @@ export default function Contact() {
               {socials.map((s) => (
                 <a
                   key={s.label}
+                  lang="en"
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"

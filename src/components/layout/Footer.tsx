@@ -60,6 +60,7 @@ const Footer = () => {
             {socials.map((s) => (
               <a
                 key={s.label}
+                lang="en"
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -85,7 +86,9 @@ const Footer = () => {
       </p>
 
       <div className="flex items-center justify-between gap-4 border-t border-[#6D6C6A] py-5 md:py-7">
-        <p className={label}>© {new Date().getFullYear()} Mursal Haxverdiyev</p>
+        <p lang="en" className={label}>
+          © {new Date().getFullYear()} Mursal Haxverdiyev
+        </p>
         <p className={`${label} hidden md:block`}>{t("role")}</p>
         <button
           type="button"

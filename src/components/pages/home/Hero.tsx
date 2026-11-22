@@ -61,7 +61,7 @@ const Hero = () => {
         <p className={`${small} whitespace-pre-line`}>
           {t("intro")}
         </p>
-        <p className={`${small} whitespace-pre-line md:text-center`}>
+        <p lang="en" className={`${small} whitespace-pre-line md:text-center`}>
           {
             "Node.js · NestJS · TypeScript\nPostgreSQL · Prisma · Redis\nReact · Next.js · Docker"
           }
@@ -81,6 +81,7 @@ const Hero = () => {
             {socials.map((s, i) => (
               <span key={s.label} className="flex items-center gap-4 md:gap-8">
                 <a
+                  lang="en"
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
