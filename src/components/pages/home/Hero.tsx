@@ -50,7 +50,7 @@ const Hero = () => {
         </p>
         <p className={`${small} whitespace-pre-line md:text-end`}>
           {
-            "Software Engineer @Microsol.\nPreviously TogeTech, SHI Studio,\nPrepare.sh and Sabah.Hub."
+            "Software Engineer.\nPreviously Microsol, TogeTech,\nSHI Studio, Prepare.sh and Sabah.Hub."
           }
         </p>
       </div>

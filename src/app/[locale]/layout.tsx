@@ -11,6 +11,7 @@ import CustomCursor from "@/components/layout/CustomCursor";
 import Tracker from "@/components/layout/Tracker";
 import Script from "next/script";
 import {
+  INDEXABLE,
   JOB_TITLE,
   NAME,
   SITE_URL,
@@ -18,6 +19,8 @@ import {
   personJsonLd,
   robots,
 } from "@/lib/seo";
+
+const GA_ID = "G-B32WTL1HDH";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -82,14 +85,22 @@ export default async function LocaleLayout({
           </LenisProvider>
         </NextIntlClientProvider>
 
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-B32WTL1HDH');
-          `}
-        </Script>
+        {INDEXABLE && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){window.dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
