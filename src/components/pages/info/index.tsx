@@ -166,7 +166,9 @@ export default function InfoPage() {
                   <p className="text-[#0A0A0A] text-[1rem]/[1.375rem] font-medium">
                     {t(`certificateNames.${c.id}`)}
                   </p>
-                  <p className="text-[#ADADAD] text-[0.75rem]/[1.05rem] md:text-[0.875rem]/[1.05rem] font-medium tracking-[-0.035rem] uppercase">
+                  <p
+                    lang="en"
+                    className="text-[#ADADAD] text-[0.75rem]/[1.05rem] md:text-[0.875rem]/[1.05rem] font-medium tracking-[-0.035rem] uppercase">
                     {c.issuer}
                   </p>
                 </div>

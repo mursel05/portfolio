@@ -59,7 +59,9 @@ export default function Work() {
               <div className="flex items-start justify-between gap-4 border-b border-[#D7D9DB] pb-4">
                 <div className="flex min-w-0 items-baseline gap-4">
                   <span className={eyebrow}>0{i + 1}</span>
-                  <h3 className="text-[#0A0A0A] text-[1.5rem]/[1.75rem] md:text-[2rem]/[2.25rem] font-medium tracking-[-0.0625rem] uppercase">
+                  <h3
+                    lang="en"
+                    className="text-[#0A0A0A] text-[1.5rem]/[1.75rem] md:text-[2rem]/[2.25rem] font-medium tracking-[-0.0625rem] uppercase">
                     {p.name}
                   </h3>
                 </div>
@@ -72,7 +74,9 @@ export default function Work() {
                 <p className="text-[#212325] text-[1rem]/[1.375rem]">
                   {tp(`items.${p.id}.description`)}
                 </p>
-                <p className="text-[#ADADAD] text-[0.75rem]/[1.05rem] md:text-[0.875rem]/[1.05rem] font-medium tracking-[-0.035rem] uppercase">
+                <p
+                  lang="en"
+                  className="text-[#ADADAD] text-[0.75rem]/[1.05rem] md:text-[0.875rem]/[1.05rem] font-medium tracking-[-0.035rem] uppercase">
                   {p.stack}
                 </p>
               </div>
@@ -106,7 +110,9 @@ export default function Work() {
               </div>
 
               <div className="flex flex-col gap-1 pl-14 md:w-85 md:shrink-0 md:pl-0">
-                <h3 className="text-[#0A0A0A] text-[1.5rem]/[1.75rem] md:text-[2rem]/[2.25rem] font-medium tracking-[-0.0625rem] uppercase">
+                <h3
+                  lang="en"
+                  className="text-[#0A0A0A] text-[1.5rem]/[1.75rem] md:text-[2rem]/[2.25rem] font-medium tracking-[-0.0625rem] uppercase">
                   {e.company}
                 </h3>
                 <p className={eyebrow}>{t(`items.${e.id}.role`)}</p>
