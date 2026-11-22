@@ -31,7 +31,7 @@ export const projects = [
   },
   {
     id: "storo",
-    name: "STORO",
+    name: "Storo",
     stack:
       "Next.js · NestJS · TypeScript · Prisma · PostgreSQL · Redis · Tailwind CSS · GSAP",
     image1: "/images/storo-1.png",
