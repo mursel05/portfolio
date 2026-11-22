@@ -1,7 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { EMAIL, socials } from "@/lib/info";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import LocaleSwitcher from "@/components/layout/LocaleSwitcher";
 
 const nav = [
@@ -9,6 +9,12 @@ const nav = [
   { key: "info", href: "/info" },
   { key: "contact", href: "/contact" },
 ] as const;
+
+/**
+ * Desktop heading size per locale so "greeting + name" stays on one line
+ * (az/ru greetings are ~1.45x wider than "Hi, I'm"). Mobile always wraps and uses the 4rem floor.
+ */
+const HEADING_VW: Record<string, number> = { en: 15.5, az: 10.6, ru: 10.6 };
 
 const small =
   "text-[0.75rem]/[1.05rem] md:text-[0.875rem]/[1.05rem] font-medium tracking-[-0.035rem] uppercase";
@@ -19,6 +25,7 @@ const Hero = () => {
   const t = useTranslations("hero");
   const tn = useTranslations("nav");
   const tc = useTranslations("common");
+  const locale = useLocale();
 
   return (
     <section className="relative w-full min-h-svh overflow-hidden flex flex-col text-white">
@@ -42,7 +49,10 @@ const Hero = () => {
         className={`${bar} absolute right-5 top-5 z-10 md:right-10 md:top-7`}
       />
 
-      <h1 className="relative px-5 md:px-10 pt-24 md:pt-30 font-anton uppercase text-[#F3F0EC] text-[clamp(4rem,15.5vw,15.625rem)] leading-20 tracking-[-0.02em]">
+      <h1 className="relative px-5 md:px-10 pt-24 md:pt-30 font-anton uppercase text-[#F3F0EC] leading-20 tracking-[-0.02em]"
+        style={{
+          fontSize: `clamp(4rem, ${HEADING_VW[locale] ?? 15.5}vw, 15.625rem)`,
+        }}>
         {t("greeting")}
         <br className="md:hidden" /> {t("name")}
       </h1>

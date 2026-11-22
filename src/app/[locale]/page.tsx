@@ -23,7 +23,7 @@ export async function generateMetadata({
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="w-full min-w-0">
       <Hero />
       <Projects />
       <Services />
