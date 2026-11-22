@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = pageMetadata({
   title: "Work & Experience",
   description:
-    "Selected projects by Mursal Haxverdiyev (Morninx, 3ssay, Jeff, Hiri) and experience at Microsol, TogeTech, SHI Studio, Prepare.sh and Sabah.Hub.",
+    "Selected projects by Mursal Haxverdiyev (Morninx, 3ssay, Jeff, Hiri, STORO) and experience at Microsol, TogeTech, SHI Studio, Prepare.sh and Sabah.Hub.",
   path: "/work",
 });
 
