@@ -52,7 +52,7 @@ const Services = () => {
           Services
         </h2>
         <p className="text-start md:text-center text-[#212325] text-[0.75rem]/[1.05rem] md:text-[0.875rem]/[1.05rem] tracking-[-0.035rem] whitespace-pre-line">
-          {"EXPERIENCE: 3+ YEARS\nCOMPANIES: 5\nPROJECTS: 4 FEATURED"}
+          {"EXPERIENCE: 3+ YEARS\nCOMPANIES: 5\nPROJECTS: 5 FEATURED"}
         </p>
         <p className="text-start md:text-end text-[#ADADAD] font-medium text-[1rem]/[1.25rem] md:text-[1.125rem]/[1.3125rem] tracking-[-0.045rem] md:whitespace-pre-line">
           {

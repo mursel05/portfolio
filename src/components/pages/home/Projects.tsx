@@ -46,6 +46,15 @@ const projects = [
     image1: "/images/hiri-1.png",
     image2: "/images/hiri-2.png",
   },
+  {
+    name: "STORO",
+    type: "Digital commerce platform",
+    stack: "Next.js · NestJS · TypeScript · Prisma · PostgreSQL · Redis · Tailwind CSS · GSAP",
+    description:
+      "Digital commerce platform that brings together wholesalers, sellers and buyers, with online storefronts businesses can set up from ready-made templates.",
+    image1: "/images/storo-1.png",
+    image2: "/images/storo-2.png",
+  },
 ];
 
 const TOTAL = projects.length;
