@@ -24,7 +24,7 @@
   },
   "hero": {
     "greeting": "Salam, mən",
-    "name": "Mursal",
+    "name": "Mürsəl",
     "intro": "REST API və verilənlər bazasından\nsürətli, əlçatan interfeyslərə qədər\nmiqyaslana bilən veb tətbiqlər qururam.",
     "background": "Proqram mühəndisi.\nƏvvəllər MICROSOL, TOGETECH,\nSHI STUDIO, PREPARE.SH və SABAH.HUB."
   },
@@ -191,19 +191,19 @@
   "meta": {
     "jobTitle": "Full-Stack Developer",
     "home": {
-      "description": "Mursal Haxverdiyev, Node.js, NestJS, PostgreSQL, React və Next.js ilə miqyaslana bilən veb tətbiqlər quran azərbaycanlı full-stack developer."
+      "description": "Mürsəl Haxverdiyev, Node.js, NestJS, PostgreSQL, React və Next.js ilə miqyaslana bilən veb tətbiqlər quran azərbaycanlı full-stack developer."
     },
     "work": {
       "title": "İşlər və təcrübə",
-      "description": "Mursal Haxverdiyevin seçilmiş layihələri (Morninx, 3ssay, Jeff, Hiri, Storo) və Microsol, TogeTech, SHI Studio, Prepare.sh və Sabah.Hub-da iş təcrübəsi."
+      "description": "Mürsəl Haxverdiyevin seçilmiş layihələri (Morninx, 3ssay, Jeff, Hiri, Storo) və Microsol, TogeTech, SHI Studio, Prepare.sh və Sabah.Hub-da iş təcrübəsi."
     },
     "info": {
       "title": "Haqqımda, bacarıqlar və təhsil",
-      "description": "Mursal Haxverdiyev haqqında: Azərbaycanda yaşayan full-stack developer. TypeScript, Node.js, NestJS, React, Next.js və PostgreSQL bacarıqları, təhsil və sertifikatlar."
+      "description": "Mürsəl Haxverdiyev haqqında: Azərbaycanda yaşayan full-stack developer. TypeScript, Node.js, NestJS, React, Next.js və PostgreSQL bacarıqları, təhsil və sertifikatlar."
     },
     "contact": {
       "title": "Əlaqə",
-      "description": "Full-stack vakansiyalar, frilans layihələr və ya əməkdaşlıq üçün Mursal Haxverdiyevlə əlaqə. E-poçt, telefon, LinkedIn və GitHub."
+      "description": "Full-stack vakansiyalar, frilans layihələr və ya əməkdaşlıq üçün Mürsəl Haxverdiyevlə əlaqə. E-poçt, telefon, LinkedIn və GitHub."
     }
   }
 }
