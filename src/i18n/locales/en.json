@@ -1,1 +1,209 @@
-{}
+{
+  "nav": {
+    "home": "home",
+    "work": "work",
+    "info": "info",
+    "contact": "contact",
+    "menu": "Menu",
+    "close": "Close",
+    "main": "Main",
+    "language": "Language"
+  },
+  "common": {
+    "sayHello": "Say hello",
+    "navigate": "Navigate",
+    "social": "Social",
+    "phone": "Phone",
+    "email": "Email",
+    "top": "top",
+    "role": "Software Engineer",
+    "present": "Present",
+    "letsBuild": "Let's build",
+    "somethingTogether": "something together",
+    "openTo": "Open to new projects,\ncollaborations and\nfull-stack roles."
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Mursal",
+    "intro": "Full-stack developer building scalable\nweb apps, from REST APIs and databases\nto fast, accessible interfaces.",
+    "background": "Software Engineer.\nPreviously Microsol, TogeTech,\nSHI Studio, Prepare.sh and Sabah.Hub."
+  },
+  "projects": {
+    "title": "Projects",
+    "screenshot": "{name} screenshot {n}",
+    "items": {
+      "morninx": {
+        "type": "Company website",
+        "description": "Interactive 3D model in Three.js, with the whole page animated in GSAP."
+      },
+      "3ssay": {
+        "type": "AI-powered essay evaluation platform",
+        "description": "Evaluates essays with AI, giving numerical scores and detailed feedback."
+      },
+      "jeff": {
+        "type": "Company website",
+        "description": "Company website on Next.js, with a NestJS and PostgreSQL backend."
+      },
+      "hiri": {
+        "type": "Job posting and application platform",
+        "description": "React and Next.js platform where employers post jobs and candidates apply."
+      },
+      "storo": {
+        "type": "Digital commerce platform",
+        "description": "Commerce platform bringing wholesalers, sellers and buyers together."
+      }
+    }
+  },
+  "services": {
+    "title": "Services",
+    "imageAlt": "Services",
+    "stats": "Experience: 3+ years\nCompanies: 5\nProjects: {count} featured",
+    "intro": "I build web apps end to end:\nAPIs, databases and the\ninterfaces on top of them.",
+    "items": {
+      "fullstack": {
+        "title": "Full-Stack Web Applications",
+        "subtitle": "Next.js, NestJS and PostgreSQL",
+        "description": "End-to-end products from database schema to UI: NestJS backends, Prisma and PostgreSQL, React and Next.js frontends, and payment integration with Paddle or Stripe, as in 3ssay and Jeff."
+      },
+      "backend": {
+        "title": "Backend & REST APIs",
+        "subtitle": "Node.js, NestJS and Express",
+        "description": "Backend services and RESTful APIs with clean, maintainable business logic, JWT-based authentication and authorization, and third-party integrations."
+      },
+      "databases": {
+        "title": "Databases & Data Modeling",
+        "subtitle": "PostgreSQL, MongoDB and Redis",
+        "description": "Relational and NoSQL schema design, data access layers with Prisma and TypeORM, and query and data model optimization."
+      },
+      "frontend": {
+        "title": "Frontend & Mobile",
+        "subtitle": "React, Next.js, Angular and Ionic",
+        "description": "Responsive interfaces and reusable components with React, Next.js, Angular and Svelte, plus cross-platform mobile apps with Ionic. TanStack Query, React Hook Form and Zod for data and forms."
+      },
+      "devops": {
+        "title": "DevOps & Deployment",
+        "subtitle": "Docker, GitHub Actions and Azure",
+        "description": "Containerized apps with Docker and Docker Compose, CI/CD pipelines with GitHub Actions, and deployments on Azure, with AWS S3 and Firebase where needed."
+      },
+      "animation": {
+        "title": "Animation & Interactive 3D",
+        "subtitle": "GSAP and Three.js",
+        "description": "Smooth scroll-driven animations and interactive 3D scenes that make a site feel alive, without hurting performance. Used on Morninx."
+      }
+    }
+  },
+  "work": {
+    "title": "Work",
+    "stats": "Projects: {projects}\nCompanies: {companies}",
+    "intro": "Selected projects and\nwhere I've built them.",
+    "selected": "Selected projects",
+    "experience": "Experience",
+    "items": {
+      "microsol": {
+        "role": "Software Engineer",
+        "summary": "Backend services and REST APIs with NestJS and TypeScript, database schemas and data access layers with Prisma and PostgreSQL. Production frontends in React and Next.js with TanStack Query, React Hook Form and Zod, plus GSAP and Three.js experiences."
+      },
+      "togetech": {
+        "role": "Software Engineer (Freelance)",
+        "summary": "Led a team delivering full-stack web and mobile apps with React, Angular, Ionic and NestJS. Designed REST APIs with JWT authentication and authorization, and PostgreSQL and MongoDB databases with TypeORM."
+      },
+      "shi": {
+        "role": "Software Engineer (Freelance)",
+        "summary": "Full-stack web apps for clients with React, Next.js and NestJS: backend services, REST APIs, JWT authentication and authorization, and reusable frontend components."
+      },
+      "prepare": {
+        "role": "Software Engineer",
+        "summary": "Full-stack product features with React, Svelte and TypeScript: API integrations, authentication flows and third-party integrations. Contributed to Docker, Azure and GitHub Actions CI/CD workflows."
+      },
+      "sabah": {
+        "role": "Frontend Developer",
+        "summary": "Apartment Management startup product: accessible, optimized interfaces with React, Redux, TypeScript and SASS, built together with UI/UX designers and backend developers."
+      }
+    }
+  },
+  "info": {
+    "title": "Info",
+    "facts": "Based in: Azerbaijan\nRole: Full-stack developer",
+    "intro": "A bit about me, what I use\nand where I studied.",
+    "about": "About",
+    "summary": "Full-stack developer designing and building scalable web and mobile applications. I build backend services and REST APIs with Node.js, NestJS, Express and TypeScript, handle authentication, authorization and database design with PostgreSQL and Prisma, and ship responsive interfaces with React, Next.js, Angular, Ionic and Svelte. Focused on clean architecture, maintainable code and performance.",
+    "getInTouch": "Get in touch",
+    "skills": "Skills",
+    "skillGroups": {
+      "languages": "Languages",
+      "backend": "Backend",
+      "databases": "Databases",
+      "frontend": "Frontend",
+      "styling": "Styling & UI",
+      "devops": "DevOps & Cloud",
+      "tools": "Tools & Workflow"
+    },
+    "education": "Education",
+    "degrees": {
+      "master": "Master of Digital Government",
+      "bachelor": "Bachelor of Computer Science"
+    },
+    "school": "The Academy of Public Administration Under the President of the Republic of Azerbaijan",
+    "gpa": "GPA: 95.3/100",
+    "certificates": "Certificates",
+    "certificateNames": {
+      "codedamn": "Learn the basics of web: Internet fundamentals",
+      "restApi": "REST API (Intermediate)",
+      "figma": "Get Started with Figma",
+      "javascript": "JavaScript",
+      "frontend": "Frontend Development"
+    },
+    "languages": "Languages",
+    "languageList": {
+      "az": "Azerbaijani",
+      "en": "English"
+    },
+    "levels": {
+      "native": "Native",
+      "upperIntermediate": "Upper-Intermediate"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Have a project or a role in mind?\nSend a message.",
+    "languages": "Languages",
+    "languageValue": "Azerbaijani · English"
+  },
+  "form": {
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Tell me about your project",
+    "send": "Send message",
+    "sending": "Sending...",
+    "sent": "Thanks, I'll get back to you soon.",
+    "error": "Something went wrong. Please email me directly."
+  },
+  "notFound": {
+    "error": "Error",
+    "title": "Page not found",
+    "label": "404, page not found",
+    "goBack": "Go back",
+    "backHome": "Back home"
+  },
+  "meta": {
+    "jobTitle": "Full-Stack Developer",
+    "home": {
+      "description": "Mursal Haxverdiyev, full-stack developer from Azerbaijan building scalable web apps with Node.js, NestJS, PostgreSQL, React and Next.js."
+    },
+    "work": {
+      "title": "Work & Experience",
+      "description": "Selected projects by Mursal Haxverdiyev (Morninx, 3ssay, Jeff, Hiri, Storo) and experience at Microsol, TogeTech, SHI Studio, Prepare.sh and Sabah.Hub."
+    },
+    "info": {
+      "title": "About, Skills & Education",
+      "description": "About Mursal Haxverdiyev: full-stack developer based in Azerbaijan. Skills in TypeScript, Node.js, NestJS, React, Next.js and PostgreSQL, education and certificates."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact Mursal Haxverdiyev about full-stack roles, freelance projects or collaborations. Email, phone, LinkedIn and GitHub."
+    }
+  }
+}

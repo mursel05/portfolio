@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Anton_SC, Geist } from "next/font/google";
+import { Anton_SC, Geist, Oswald } from "next/font/google";
 import "../globals.css";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import LenisProvider from "@/lib/lenis";
 import CustomScrollbar from "@/components/layout/CustomScrollbar";
 import { routing } from "@/i18n/routing";
@@ -12,7 +12,6 @@ import Tracker from "@/components/layout/Tracker";
 import Script from "next/script";
 import {
   INDEXABLE,
-  JOB_TITLE,
   NAME,
   SITE_URL,
   jsonLdString,
@@ -22,16 +21,26 @@ import {
 
 const GA_ID = "G-B32WTL1HDH";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: { default: `${NAME} | ${JOB_TITLE}`, template: `%s | ${NAME}` },
-  description:
-    "Mursal Haxverdiyev is a full-stack developer from Azerbaijan building scalable web apps with Node.js, NestJS, PostgreSQL, React and Next.js.",
-  applicationName: NAME,
-  authors: [{ name: NAME, url: SITE_URL }],
-  creator: NAME,
-  robots,
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: `${NAME} | ${t("jobTitle")}`,
+      template: `%s | ${NAME}`,
+    },
+    description: t("home.description"),
+    applicationName: NAME,
+    authors: [{ name: NAME, url: SITE_URL }],
+    creator: NAME,
+    robots,
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: "#F3F0EC",
@@ -41,13 +50,21 @@ export const viewport: Viewport = {
 };
 
 const antonSc = Anton_SC({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: "400",
   variable: "--font-anton-sc",
 });
 
+// Anton SC has no Cyrillic, so the Russian locale uses Oswald for display text (see globals.css).
+const oswald = Oswald({
+  subsets: ["latin", "cyrillic"],
+  weight: "700",
+  variable: "--font-oswald",
+  preload: false,
+});
+
 const geist = Geist({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext", "cyrillic"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-geist",
 });
@@ -70,11 +87,11 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale} className={`${antonSc.variable} ${geist.variable}`}>
+    <html lang={locale} className={`${antonSc.variable} ${oswald.variable} ${geist.variable}`}>
       <body className="flex">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: jsonLdString(personJsonLd()) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdString(personJsonLd(locale)) }}
         />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LenisProvider>

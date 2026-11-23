@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { INDEXABLE, SITE_URL } from "@/lib/seo";
+import { routing } from "@/i18n/routing";
+import { INDEXABLE, SITE_URL, languageAlternates, localizedPath } from "@/lib/seo";
 
 const pages: {
   path: string;
@@ -18,10 +19,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Evaluated at build time, so lastModified is the deploy date.
   const lastModified = new Date();
 
-  return pages.map((page) => ({
-    url: `${SITE_URL}${page.path || "/"}`,
-    lastModified,
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
-  }));
+  const abs = (p: string) => `${SITE_URL}${p}`;
+
+  return pages.flatMap((page) =>
+    routing.locales.map((locale) => ({
+      url: abs(localizedPath(locale, page.path)),
+      lastModified,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+      alternates: {
+        languages: Object.fromEntries(
+          Object.entries(languageAlternates(page.path)).map(([l, p]) => [
+            l,
+            abs(p),
+          ]),
+        ),
+      },
+    })),
+  );
 }

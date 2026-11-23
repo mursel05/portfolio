@@ -123,7 +123,7 @@ export default async function StatsPage({
 
   if (!(await isAuthed())) {
     return (
-      <main className="flex min-h-svh flex-col justify-center gap-8 px-5 md:px-10">
+      <main className="flex min-h-svh w-full flex-col justify-center gap-8 px-5 md:px-10">
         <h1 className={sectionTitle}>Stats</h1>
         <form action={login} className="flex max-w-md flex-col gap-6">
           <label className="flex flex-col gap-1">
@@ -174,7 +174,7 @@ export default async function StatsPage({
   const maxDay = Math.max(...s.daily.map((d) => d.views), 1);
 
   return (
-    <main className="flex flex-col gap-12 px-5 pb-10 pt-10 md:gap-20 md:px-10 md:pb-15 md:pt-15">
+    <main className="flex w-full min-w-0 flex-col gap-12 px-5 pb-10 pt-10 md:gap-20 md:px-10 md:pb-15 md:pt-15">
       <div className="flex flex-col gap-6 border-b border-[#6D6C6A] pb-8 md:flex-row md:items-end md:justify-between md:gap-8 md:pb-15">
         <h1 className={sectionTitle}>Stats</h1>
         <div className="flex items-center gap-6">

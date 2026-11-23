@@ -1,1 +1,209 @@
-{}
+{
+  "nav": {
+    "home": "главная",
+    "work": "работы",
+    "info": "обо мне",
+    "contact": "контакты",
+    "menu": "Меню",
+    "close": "Закрыть",
+    "main": "Основное",
+    "language": "Язык"
+  },
+  "common": {
+    "sayHello": "Написать мне",
+    "navigate": "Навигация",
+    "social": "Соцсети",
+    "phone": "Телефон",
+    "email": "Email",
+    "top": "наверх",
+    "role": "Software Engineer",
+    "present": "Сейчас",
+    "letsBuild": "Давайте создадим",
+    "somethingTogether": "что-то вместе",
+    "openTo": "Открыт к новым проектам,\nсотрудничеству и\nfull-stack вакансиям."
+  },
+  "hero": {
+    "greeting": "Привет, я",
+    "name": "Mursal",
+    "intro": "Full-stack разработчик: масштабируемые\nвеб-приложения, от REST API и баз данных\nдо быстрых и доступных интерфейсов.",
+    "background": "Software Engineer.\nРанее Microsol, TogeTech,\nSHI Studio, Prepare.sh и Sabah.Hub."
+  },
+  "projects": {
+    "title": "Проекты",
+    "screenshot": "{name}, скриншот {n}",
+    "items": {
+      "morninx": {
+        "type": "Сайт компании",
+        "description": "Интерактивная 3D-модель на Three.js, вся страница анимирована на GSAP."
+      },
+      "3ssay": {
+        "type": "Платформа оценки эссе с ИИ",
+        "description": "Оценивает эссе с помощью ИИ: ставит баллы и даёт подробный отзыв."
+      },
+      "jeff": {
+        "type": "Сайт компании",
+        "description": "Сайт компании на Next.js с бэкендом на NestJS и PostgreSQL."
+      },
+      "hiri": {
+        "type": "Платформа вакансий и откликов",
+        "description": "Платформа, где работодатели публикуют вакансии, а кандидаты откликаются."
+      },
+      "storo": {
+        "type": "Платформа цифровой торговли",
+        "description": "Торговая платформа, объединяющая оптовиков, продавцов и покупателей."
+      }
+    }
+  },
+  "services": {
+    "title": "Услуги",
+    "imageAlt": "Услуги",
+    "stats": "Опыт: 3+ года\nКомпании: 5\nИзбранные проекты: {count}",
+    "intro": "Создаю веб-приложения целиком:\nAPI, базы данных и\nинтерфейсы поверх них.",
+    "items": {
+      "fullstack": {
+        "title": "Full-stack веб-приложения",
+        "subtitle": "Next.js, NestJS и PostgreSQL",
+        "description": "Продукты от схемы базы данных до интерфейса: бэкенд на NestJS, Prisma и PostgreSQL, фронтенд на React и Next.js, интеграция платежей через Paddle или Stripe, как в 3ssay и Jeff."
+      },
+      "backend": {
+        "title": "Бэкенд и REST API",
+        "subtitle": "Node.js, NestJS и Express",
+        "description": "Бэкенд-сервисы и RESTful API с чистой, поддерживаемой бизнес-логикой, аутентификацией и авторизацией на JWT и сторонними интеграциями."
+      },
+      "databases": {
+        "title": "Базы данных и моделирование",
+        "subtitle": "PostgreSQL, MongoDB и Redis",
+        "description": "Проектирование реляционных и NoSQL схем, слои доступа к данным на Prisma и TypeORM, оптимизация запросов и моделей данных."
+      },
+      "frontend": {
+        "title": "Фронтенд и мобильные приложения",
+        "subtitle": "React, Next.js, Angular и Ionic",
+        "description": "Адаптивные интерфейсы и переиспользуемые компоненты на React, Next.js, Angular и Svelte, кроссплатформенные мобильные приложения на Ionic. TanStack Query, React Hook Form и Zod для данных и форм."
+      },
+      "devops": {
+        "title": "DevOps и деплой",
+        "subtitle": "Docker, GitHub Actions и Azure",
+        "description": "Контейнеризация на Docker и Docker Compose, CI/CD на GitHub Actions, деплой в Azure, при необходимости AWS S3 и Firebase."
+      },
+      "animation": {
+        "title": "Анимация и интерактивное 3D",
+        "subtitle": "GSAP и Three.js",
+        "description": "Плавные анимации при скролле и интерактивные 3D-сцены, которые оживляют сайт без потери производительности. Использовано в Morninx."
+      }
+    }
+  },
+  "work": {
+    "title": "Работы",
+    "stats": "Проекты: {projects}\nКомпании: {companies}",
+    "intro": "Избранные проекты и\nгде я их создавал.",
+    "selected": "Избранные проекты",
+    "experience": "Опыт",
+    "items": {
+      "microsol": {
+        "role": "Software Engineer",
+        "summary": "Бэкенд-сервисы и REST API на NestJS и TypeScript, схемы баз данных и слои доступа к данным на Prisma и PostgreSQL. Продакшн-фронтенд на React и Next.js с TanStack Query, React Hook Form и Zod, а также интерактив на GSAP и Three.js."
+      },
+      "togetech": {
+        "role": "Software Engineer (фриланс)",
+        "summary": "Руководил командой, создававшей full-stack веб- и мобильные приложения на React, Angular, Ionic и NestJS. Проектировал REST API с аутентификацией и авторизацией на JWT, базы данных PostgreSQL и MongoDB с TypeORM."
+      },
+      "shi": {
+        "role": "Software Engineer (фриланс)",
+        "summary": "Full-stack веб-приложения для клиентов на React, Next.js и NestJS: бэкенд-сервисы, REST API, аутентификация и авторизация на JWT, переиспользуемые компоненты фронтенда."
+      },
+      "prepare": {
+        "role": "Software Engineer",
+        "summary": "Full-stack функции продукта на React, Svelte и TypeScript: интеграции API, сценарии аутентификации и сторонние интеграции. Участвовал в CI/CD на Docker, Azure и GitHub Actions."
+      },
+      "sabah": {
+        "role": "Frontend-разработчик",
+        "summary": "Стартап-продукт Apartment Management: доступные, оптимизированные интерфейсы на React, Redux, TypeScript и SASS, вместе с UI/UX-дизайнерами и бэкенд-разработчиками."
+      }
+    }
+  },
+  "info": {
+    "title": "Обо мне",
+    "facts": "Локация: Азербайджан\nРоль: Full-stack разработчик",
+    "intro": "Немного обо мне, чем я пользуюсь\nи где учился.",
+    "about": "Обо мне",
+    "summary": "Full-stack разработчик, проектирую и создаю масштабируемые веб- и мобильные приложения. Пишу бэкенд-сервисы и REST API на Node.js, NestJS, Express и TypeScript, занимаюсь аутентификацией, авторизацией и проектированием баз данных на PostgreSQL и Prisma, делаю адаптивные интерфейсы на React, Next.js, Angular, Ionic и Svelte. Фокус на чистой архитектуре, поддерживаемом коде и производительности.",
+    "getInTouch": "Связаться",
+    "skills": "Навыки",
+    "skillGroups": {
+      "languages": "Языки",
+      "backend": "Бэкенд",
+      "databases": "Базы данных",
+      "frontend": "Фронтенд",
+      "styling": "Стили и UI",
+      "devops": "DevOps и облако",
+      "tools": "Инструменты и процессы"
+    },
+    "education": "Образование",
+    "degrees": {
+      "master": "Магистр цифрового управления",
+      "bachelor": "Бакалавр компьютерных наук"
+    },
+    "school": "Академия государственного управления при Президенте Азербайджанской Республики",
+    "gpa": "Средний балл: 95.3/100",
+    "certificates": "Сертификаты",
+    "certificateNames": {
+      "codedamn": "Learn the basics of web: Internet fundamentals",
+      "restApi": "REST API (Intermediate)",
+      "figma": "Get Started with Figma",
+      "javascript": "JavaScript",
+      "frontend": "Frontend Development"
+    },
+    "languages": "Языки",
+    "languageList": {
+      "az": "Азербайджанский",
+      "en": "Английский"
+    },
+    "levels": {
+      "native": "Родной",
+      "upperIntermediate": "Выше среднего"
+    }
+  },
+  "contact": {
+    "title": "Контакты",
+    "intro": "Есть проект или вакансия?\nНапишите мне.",
+    "languages": "Языки",
+    "languageValue": "Азербайджанский · Английский"
+  },
+  "form": {
+    "name": "Имя",
+    "namePlaceholder": "Ваше имя",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "message": "Сообщение",
+    "messagePlaceholder": "Расскажите о проекте",
+    "send": "Отправить",
+    "sending": "Отправка...",
+    "sent": "Спасибо, скоро отвечу.",
+    "error": "Что-то пошло не так. Напишите мне на почту."
+  },
+  "notFound": {
+    "error": "Ошибка",
+    "title": "Страница не найдена",
+    "label": "404, страница не найдена",
+    "goBack": "Назад",
+    "backHome": "На главную"
+  },
+  "meta": {
+    "jobTitle": "Full-Stack Developer",
+    "home": {
+      "description": "Mursal Haxverdiyev, full-stack разработчик из Азербайджана: масштабируемые веб-приложения на Node.js, NestJS, PostgreSQL, React и Next.js."
+    },
+    "work": {
+      "title": "Работы и опыт",
+      "description": "Избранные проекты Mursal Haxverdiyev (Morninx, 3ssay, Jeff, Hiri, Storo) и опыт работы в Microsol, TogeTech, SHI Studio, Prepare.sh и Sabah.Hub."
+    },
+    "info": {
+      "title": "Обо мне, навыки и образование",
+      "description": "О Mursal Haxverdiyev: full-stack разработчик из Азербайджана. Навыки TypeScript, Node.js, NestJS, React, Next.js и PostgreSQL, образование и сертификаты."
+    },
+    "contact": {
+      "title": "Контакты",
+      "description": "Связаться с Mursal Haxverdiyev по поводу full-stack вакансий, фриланс-проектов или сотрудничества. Email, телефон, LinkedIn и GitHub."
+    }
+  }
+}
